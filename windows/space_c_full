@@ -1,0 +1,6 @@
+#problem  :  c盘满了
+
+#-reason  :  vscode缓存占满了
+
+#--solve  :  1.删除文件夹释放空间 
+             2.修改vscode配置永久解决问题
