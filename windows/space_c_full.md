@@ -2,7 +2,7 @@
   ## c盘满了
   ![Alt Text](https://github.com/wuyiao/note/blob/master/windows/image/817d35973fde4f093800405c78c5389.png)
 # -reason
-  ##vscode缓存占满了
+  ## vscode缓存占满了
   ![Alt Text](https://github.com/wuyiao/note/blob/master/windows/image/9eadaa9e7ada29587662dc57c8ed94f.png)
 # --solve   
   ## 1.删除文件夹释放空间 
