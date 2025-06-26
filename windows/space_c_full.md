@@ -1,8 +1,10 @@
-# problem  :  c盘满了
+# problem  
+  ## c盘满了
   ![Alt Text](https://github.com/wuyiao/note/blob/master/windows/image/817d35973fde4f093800405c78c5389.png)
-# -reason  :  vscode缓存占满了
+# -reason
+  ##vscode缓存占满了
   ![Alt Text](https://github.com/wuyiao/note/blob/master/windows/image/9eadaa9e7ada29587662dc57c8ed94f.png)
-# --solve  :  
-## 1.删除文件夹释放空间 
-## 2.修改vscode配置永久解决问题
+# --solve   
+  ## 1.删除文件夹释放空间 
+  ## 2.修改vscode配置永久解决问题
   ![Alt Text](https://github.com/wuyiao/note/blob/master/windows/image/816e24eafb2e1265767dc8bd4972aec.png)
