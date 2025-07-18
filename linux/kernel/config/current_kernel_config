@@ -1,0 +1,2 @@
+#After compilation, execute "vi .config" in the kernel directory to view the current kernel configuration information.
+vi .config
