@@ -1,50 +1,86 @@
+#!/bin/bash
+
+# -------------------------------
+# 设置 OUT_DIR（可选）
+# -------------------------------
+export OUT_DIR=$PWD/out
+
+# -------------------------------
+# 定义 gettop：获取当前脚本所在的工程根目录
+# -------------------------------
+function gettop() {
+    local SOURCE="${BASH_SOURCE[0]}"
+    while [ -h "$SOURCE" ]; do
+        DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+        SOURCE="$(readlink "$SOURCE")"
+        [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+    done
+    local DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+    echo "$DIR"
+}
+
+# -------------------------------
+# 定义 godir：查找匹配的文件并切换目录
+# -------------------------------
 function godir () {
     if [[ -z "$1" ]]; then
         echo "Usage: godir <regex>"
         return
     fi
+
     local T=$(gettop)
     local FILELIST
+
     if [ ! "$OUT_DIR" = "" ]; then
-        mkdir -p $OUT_DIR
-        FILELIST=$OUT_DIR/filelist
+        mkdir -p "$OUT_DIR"
+        FILELIST="$OUT_DIR/filelist"
     else
-        FILELIST=$T/filelist
+        FILELIST="$T/filelist"
     fi
+
     if [[ ! -f $FILELIST ]]; then
         echo -n "Creating index..."
-        (\cd $T; find . -wholename ./out -prune -o -wholename ./.repo -prune -o -type f > $FILELIST)
+        (\cd "$T"; find . -wholename ./out -prune -o -wholename ./.repo -prune -o -type f > "$FILELIST")
         echo " Done"
         echo ""
     fi
+
     local lines
-    lines=($(\grep "$1" $FILELIST | sed -e 's/\/[^/]*$//' | sort | uniq))
-    if [[ ${#lines[@]} = 0 ]]; then
+    IFS=$'\n' read -r -d '' -a lines < <(grep "$1" "$FILELIST" | sed -e 's/\/[^/]*$//' | sort | uniq && printf '\0')
+
+    if [[ ${#lines[@]} -eq 0 ]]; then
         echo "Not found"
         return
     fi
+
     local pathname
     local choice
-    if [[ ${#lines[@]} > 1 ]]; then
+    if [[ ${#lines[@]} -gt 1 ]]; then
         while [[ -z "$pathname" ]]; do
             local index=1
-            local line
-            for line in ${lines[@]}; do
-                printf "%6s %s\n" "[$index]" $line
-                index=$(($index + 1))
+            for line in "${lines[@]}"; do
+                printf "%6s %s\n" "[$index]" "$line"
+                index=$((index + 1))
             done
             echo
             echo -n "Select one: "
             unset choice
-            read choice
-            if [[ $choice -gt ${#lines[@]} || $choice -lt 1 ]]; then
+            read -r choice
+            if ! [[ "$choice" =~ ^[0-9]+$ ]] || [[ $choice -lt 1 || $choice -gt ${#lines[@]} ]]; then
                 echo "Invalid choice"
                 continue
             fi
-            pathname=${lines[@]:$(($choice-1)):1}
+            pathname="${lines[$((choice - 1))]}"
         done
     else
-        pathname=${lines[@]:0:1}
+        pathname="${lines[0]}"
     fi
-    \cd $T/$pathname
+
+    cd "$T/$pathname" || echo "Failed to cd into path: $T/$pathname"
 }
+
+# -------------------------------
+# 环境变量或其他初始化操作也可以放这里
+# -------------------------------
+
+echo "Environment setup done. You can now use 'godir <pattern>' to jump to source paths."
