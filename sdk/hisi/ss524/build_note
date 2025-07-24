@@ -9,7 +9,7 @@
     b, CHIP:ss524v100(default) or ss522v100 or ss615v100
     c, 如果客户想要更换u-boot表格文件, 可以使用TARGET_XLSM=*.xlsm来指定所需要的u-boot表格文件
 
-示例：	make all BOOT_MEDIA=emmc
+示例：	make BOOT_MEDIA=emmc all
 	生成文件保存在osdrv/pub/...
 
 (2)清除整个osdrv目录的编译文件：
