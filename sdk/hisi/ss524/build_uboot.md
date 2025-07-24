@@ -10,7 +10,7 @@
 # --使用osdrv\tools\pc\uboot_tools\”目录下的配置表格配置
   ## 1.配置DDR存储器
   ## 2.配置管教复用
-    保存
+  保存
 
 # --生成最终uboot镜像
   ## 1.根据表格配置生成reg_info.bin
@@ -19,4 +19,4 @@
   ## 2.将生成的 reg_info.bin 复制到 open_source/u-boot/u-boot-2020.01/目录
     cp osdrv/tools/pc/uboot_tools/reg_info.bin .reg 
     make ARCH=arm CROSS_COMPILE=arm-mix410-linux- u-boot-z.bin
-    生成的 u-boot-ss524v100.bin 就是能够在单板上运行的 uboot 镜像
+  生成的 u-boot-ss524v100.bin 就是能够在单板上运行的 uboot 镜像
