@@ -1,5 +1,8 @@
 uboot中配置
+要限速 SATA 为 3Gbps（SATA II），可以在这个 bootargs 后追加参数：
 libata.force=3.0G
+
+或
 libata.force=1.5G
 
 示例：
