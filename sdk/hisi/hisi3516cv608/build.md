@@ -1,13 +1,19 @@
-# uboot
+# sdk
+### 将下载好的linux版本压缩包放在SDK版本包中的open_source/linux/目录下
+    https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.221.tar.gz 
+### 将 mtdutils-2.1.4.tar.bz2 压缩包下载到 open_source/mtd-utils/ 目录
+    https://infraroot.at/pub/mtd/mtd-utils-2.1.4.tar.bz2
+    
+## uboot
     cp configs/hi3516cv610_defconfig .config
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- menuconfig
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- -j 20
 
-# kernel
+## kernel
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- menuconfig
     make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=0 -j
 
-# 整编
+## 整编
     在 smp/a7_linux/source/bsp 目录下执行 make 命令整编小系统镜像:
     make all
     默认编译参数为:
