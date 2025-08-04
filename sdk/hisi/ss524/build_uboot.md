@@ -20,3 +20,32 @@
     cp osdrv/tools/pc/uboot_tools/reg_info.bin .reg 
     make ARCH=arm CROSS_COMPILE=arm-mix410-linux- u-boot-z.bin
   生成的 u-boot-ss524v100.bin 就是能够在单板上运行的 uboot 镜像
+
+
+# bootargs
+  ## emmc
+    CONFIG_USE_BOOTARGS=y
+    CONFIG_BOOTARGS="mem=528M console=ttyAMA0,115200 clk_ignore_unused blkdevparts=mmcblk0:1M(u-boot.bin),15M(kernel),128M(mtd),-(data)"
+    CONFIG_USE_BOOTCOMMAND=y
+    CONFIG_BOOTCOMMAND="mmc read 0x0 0x4a000000 0x800 0x7800;bootm 0x4a000000"
+
+  ## nand
+    # printenv 
+    arch=arm
+    baudrate=115200
+    board=ss524v100
+    board_name=ss524v100
+    bootargs=mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),5M(kernel),32M(rootfs.ubifs)
+    bootcmd=nand read 0x42000000 0x100000 0x500000;bootm 0x42000000
+    bootdelay=2
+    cpu=armv7
+    ethact=eth0
+    soc=ss524v100
+    stderr=serial
+    stdin=serial
+    stdout=serial
+    vendor=vendor
+    verify=n
+    
+    Environment size: 396/262140 bytes
+    # 
