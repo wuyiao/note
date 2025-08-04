@@ -17,7 +17,7 @@
     方法1.直接点击表格第一页上的Generate reg bin file
     方法2.使用 regbin 工具（参考同级目录下解压的readme）
   ## 2.将生成的 reg_info.bin 复制到 open_source/u-boot/u-boot-2020.01/目录
-    cp osdrv/tools/pc/uboot_tools/reg_info.bin .reg 
+    cp ../../../osdrv/tools/pc/uboot_tools/reg_info.bin .reg 
     make ARCH=arm CROSS_COMPILE=arm-mix410-linux- u-boot-z.bin
   生成的 u-boot-ss524v100.bin 就是能够在单板上运行的 uboot 镜像
 
