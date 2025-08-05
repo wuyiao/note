@@ -1,0 +1,22 @@
+# printenv 
+arch=arm
+baudrate=115200
+board=ss524v100
+board_name=ss524v100
+bootargs=mem=256M console=ttyAMA0,115200 clk_ignore_unused blkdevparts=mmcblk0:1M(u-boot.bin),15M(kernel),128M(mtd),2M(logo),-(data)
+bootcmd=mmc read 0x0 0x5a000000 0x48000 0x1000;decjpgadv 0 18 0 0x60000000;mmc read 0x0 4a000000 0x800 0x7800;bootm 4a000000
+bootdelay=2
+cpu=armv7
+ethact=eth0
+jpeg_addr=0x5a000000
+jpeg_emar_buf=0x5b000000
+jpeg_size=0x200000
+soc=ss524v100
+stderr=serial
+stdin=serial
+stdout=serial
+vendor=vendor
+verify=n
+vobuf=0x60000000
+
+Environment size: 515/262140 bytes
