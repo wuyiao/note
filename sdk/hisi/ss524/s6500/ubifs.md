@@ -20,10 +20,7 @@
     ./ubinfo /dev/ubi0
     ./ubimkvol /dev/ubi0 -N ubifs -s 93MiB
     mkdir -p /mnt/mtd
-    ./mount -t ubifs /dev/ubi0_0 /mnt/mtd
-???如果此时直接重启的话，会发现 /dev/ubi0 都不见了，得执行 ubiattach /dev/ubi_ctrl -m 2 绑定分区，才有 /dev/ubi0，可以修改启动参数，来自动绑定
-启动到uboot，修改 bootars
-下一次开机之后，就不需要格式化分区，创建卷这些步骤了，只需要挂载
+    mount -t ubifs /dev/ubi0_0 /mnt/mtd
 ## mount ubifs
     mount -t ext4 /dev/mmcblk0p3 /mnt/mtd/
 ## build ubifs
