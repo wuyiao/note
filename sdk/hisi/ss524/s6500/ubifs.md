@@ -18,7 +18,7 @@
     ./ubiformat /dev/mtd2
     ./ubiattach /dev/ubi_ctrl -m 2
     ./ubinfo /dev/ubi0
-    ./ubimkvol /dev/ubi0 -N ubifs -s 100MiB
+    ./ubimkvol /dev/ubi0 -N ubifs -s 93MiB
     mkdir -p /mnt/mtd
     ./mount -t ubifs /dev/ubi0_0 /mnt/mtd
 ???如果此时直接重启的话，会发现 /dev/ubi0 都不见了，得执行 ubiattach /dev/ubi_ctrl -m 2 绑定分区，才有 /dev/ubi0，可以修改启动参数，来自动绑定
