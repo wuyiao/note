@@ -18,7 +18,7 @@
     ./ubiformat /dev/mtd2
     ./ubiattach /dev/ubi_ctrl -m 2
     ./ubinfo /dev/ubi0
-    ./ubimkvol /dev/ubi0 -N ubifs -s 93MiB
+    ./ubimkvol /dev/ubi0 -N ubifs -s 74MiB
     mount -t ubifs /dev/ubi0_0 /mnt
     ubiattach /dev/ubi_ctrl -m 2
 ## mount ubifs
