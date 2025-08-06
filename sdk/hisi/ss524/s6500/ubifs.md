@@ -19,8 +19,8 @@
     ./ubiattach /dev/ubi_ctrl -m 2
     ./ubinfo /dev/ubi0
     ./ubimkvol /dev/ubi0 -N ubifs -s 93MiB
-    mkdir -p /mnt/mtd
-    mount -t ubifs /dev/ubi0_0 /mnt/mtd
+    mount -t ubifs /dev/ubi0_0 /mnt
+    ubiattach /dev/ubi_ctrl -m 2
 ## mount ubifs
     mount -t ext4 /dev/mmcblk0p3 /mnt/mtd/
 ## build ubifs
