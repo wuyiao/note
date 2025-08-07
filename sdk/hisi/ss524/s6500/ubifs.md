@@ -1,10 +1,11 @@
 ## toolplatform
   ![Alt Text](https://github.com/wuyiao/note/blob/master/sdk/hisi/ss524/s6500/image/toolplatform.png)
-mkdir -p /mnt/mtd && mount -t ubifs /dev/ubi0_0 /mnt/mtd
 
+    mkdir -p /mnt/mtd && mount -t ubifs /dev/ubi0_0 /mnt/mtd
 
+只执行上面步骤就行
 
----下面为测试过程，测试ok后uboot配一下直接挂载就ok了
+---下面为新板子手动测试过程
 ## uboot
     setenv bootargs 'mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),10M(kernel),80M(rootfs.ubifs),2M(logo),-(data)' 
     setenv bootcmd 'nand read 0x42000000 0x100000 0xA00000; bootm 0x42000000'
