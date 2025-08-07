@@ -1,6 +1,5 @@
 # make rootfs.ubi
-        kfs.ubifs -r rootfs_ubifs/ -m 2048 -e 126976 -c 400 -o rootfs.ubifs
-
+        mkfs.ubifs -r rootfs_ubifs/ -m 2048 -e 126976 -c 400 -o rootfs.ubifs
         ubinize -o rootfs.ubi -m 2048 -p 128KiB -s 2048 -Q 0x12345678 -v ubinize.cfg
 
 ## uboot
