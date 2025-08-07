@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<Partition_Info>
+<Part Sel="1" PartitionName="fastboot" FlashType="nand" FileSystem="none" Start="0" Length="1M" SelectFile="Y:\sdk\wya\ss524v100\SS524V100_SDK_V2.0.1.1\osdrv\pub\ss524v100_image_glibc\u-boot-ss524v100.bin"/>
+<Part Sel="1" PartitionName="" FlashType="nand" FileSystem="none" Start="1M" Length="10M" SelectFile="Y:\sdk\wya\ss524v100\SS524V100_SDK_V2.0.1.1\osdrv\pub\ss524v100_image_glibc\uImage_ss524v100"/>
+</Partition_Info>
