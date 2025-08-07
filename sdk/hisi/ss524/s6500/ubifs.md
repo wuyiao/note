@@ -1,3 +1,8 @@
+# make rootfs.ubi
+        kfs.ubifs -r rootfs_ubifs/ -m 2048 -e 126976 -c 400 -o rootfs.ubifs
+
+        ubinize -o rootfs.ubi -m 2048 -p 128KiB -s 2048 -Q 0x12345678 -v ubinize.cfg
+
 ## uboot
     setenv bootargs 'mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),10M(kernel),80M(rootfs.ubifs),2M(logo),-(data)' 
     setenv bootcmd 'nand read 0x42000000 0x100000 0xA00000; bootm 0x42000000'
@@ -21,6 +26,4 @@
     ./ubimkvol /dev/ubi0 -N ubifs -s 74MiB
     mount -t ubifs /dev/ubi0_0 /mnt
 ## mount ubifs
-    mount -t ext4 /dev/mmcblk0p3 /mnt/mtd/
-## build ubifs
-    
+    mkdir -p /mnt/mtd && mount -t ubifs /dev/ubi0_0 /mnt/mtd
