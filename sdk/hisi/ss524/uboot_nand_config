@@ -275,9 +275,9 @@ CONFIG_BOOTDELAY=2
 # CONFIG_USE_BOOTCOMMAND is not set
 # CONFIG_USE_PREBOOT is not set
 CONFIG_USE_BOOTARGS=y
-CONFIG_BOOTARGS="mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),5M(kernel),32M(rootfs.ubifs)"
+CONFIG_BOOTARGS="mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),10M(kernel),80M(rootfs.ubifs),2M(logo),-(data)"
 CONFIG_USE_BOOTCOMMAND=y
-CONFIG_BOOTCOMMAND="nand read 0x42000000 0x100000 0x500000;bootm 0x42000000"
+CONFIG_BOOTCOMMAND="nand read 0x42000000 0x100000 0xA00000; bootm 0x42000000"
 
 #
 # Console
