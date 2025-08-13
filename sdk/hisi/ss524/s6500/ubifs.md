@@ -26,8 +26,8 @@
     ./ubinfo /dev/ubi0
     ./ubimkvol /dev/ubi0 -N ubifs -s 74MiB
 ## make rootfs.ubi
-        mkfs.ubifs -r rootfs_ubifs/ -m 2048 -e 131072 -c 400 -o rootfs.ubifs
-        ubinize -o rootfs.ubi -m 2048 -p 128KiB -s 2048 -Q 0x12345678 -v ubinize.cfg
+        mkfs.ubifs -r rootfs_ubifs -m 2048 -e 126976 -c 920 -o rootfs.ubifs
+        ubinize -o rootfs.ubi -m 2048 -p 128KiB -s 2048 ubinize.cfg
         cp rootfs.ubi /home/disk2/nfs_share/wya/ss524_bin/board_glibc/
 ## writer rootfs.ubi
     ./ubidetach -m 2
