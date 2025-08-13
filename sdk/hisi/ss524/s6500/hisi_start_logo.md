@@ -271,3 +271,15 @@
     setenv jpeg_emar_buf 0x5b000000
     nand read 0x5a000000 0x5b00000 0x200000
     decjpgadv 0 18 0 0x60000000
+# 测试ok后保存到源码
+## configs/ss524v100_defconfig
+    CONFIG_USE_BOOTARGS=y
+    CONFIG_BOOTARGS="mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),10M(kernel),115M(rootfs.ubifs),2M(logo)"
+    CONFIG_USE_BOOTCOMMAND=y
+    CONFIG_BOOTCOMMAND="nand read 0x5a000000 0x7e00000 0x200000;decjpgadv 0 18 0 0x60000000;nand read 0x42000000 0x100000 0xA00000; bootm 0x42000000"
+## include/configs/ss524v100.h
+    #define CONFIG_EXTRA_ENV_SETTINGS \
+        "jpeg_addr=0x5a000000\0" \
+        "jpeg_size=0x200000\0" \
+        "vobuf=0x60000000\0" \
+        "jpeg_emar_buf=0x5b000000\0"
