@@ -264,6 +264,8 @@
     
         return 0;
     }
+## product/ot_osd/vo/arch/ss524v100/hal/drv_vo_dev.c开机logo和应用程序之间一小段时间没衔接上背景色改为黑色
+    static td_u32 g_bg_color[OT_VO_MAX_PHYS_DEV_NUM] = {0x00, 0x00, 0x00};
 # uboot 命令行测试
     setenv jpeg_addr 0x5a000000
     setenv jpeg_size 0x200000  
