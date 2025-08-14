@@ -28,7 +28,8 @@
 ## make rootfs.ubi
     sudo chown -R 1000:1000 rootfs_ubifs/
     sudo chmod -R 755 rootfs_ubifs/
-    mkfs.ubifs -r rootfs_ubifs -m 2048 -e 126976 -c 920 -o rootfs.ubifs
+    //下面这条打包命令必须加-F不然会挂载失败或者挂载出来只读或者改文件就挂载不上了
+    mkfs.ubifs -r rootfs_ubifs -m 2048 -e 126976 -c 920 -o rootfs.ubifs -F
     ubinize -o rootfs.ubi -m 2048 -p 128KiB -s 2048 ubinize.cfg
     cp rootfs.ubi /home/disk2/nfs_share/wya/ss524_bin/board_glibc/
 ## writer rootfs.ubi
