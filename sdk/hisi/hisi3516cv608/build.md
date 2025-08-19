@@ -10,8 +10,8 @@
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- -j 20
 
 ## kernel
-    cp arch/arm/configs/hi3516cv610_debug_defconfig .config
-    make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- menuconfig
+修改hi3516cv610_debug_defconfig
+
     make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=0 -j
 
 ## 整编
