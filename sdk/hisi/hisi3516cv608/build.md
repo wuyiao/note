@@ -10,7 +10,7 @@
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- -j 20
 
 ## kernel
-    cp arch/arm/configs/hi3516cv610_nor_mini_defconfig .config
+    cp arch/arm/configs/hi3516cv610_defconfig .config
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- menuconfig
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- uImage
    
