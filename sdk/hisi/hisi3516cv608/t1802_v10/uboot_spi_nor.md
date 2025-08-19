@@ -1,20 +1,15 @@
-    # printenv 
-    arch=arm
-    baudrate=115200
-    board=hi3516cv610
-    board_name=hi3516cv610
-    bootargs=mem=32m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw root=/dev/mtdblock3 rootfstype=jffs2 mtdparts=sfc:512K(boot),512K(env),5M(kernel),8M(rootfs)
-    bootcmd=sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000
-    bootdelay=2
-    cpu=armv7
-    ethact=eth0
-    fdt_high=0xffffffff
-    soc=hi3516cv610
-    stderr=serial
-    stdin=serial
-    stdout=serial
-    vendor=hisilicon
-    verify=n
-    
-    Environment size: 474/262140 bytes
-    # 
+cp configs/hi3516cv610_defconfig .config
+make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- -j 20
+cp ../../gzip/bin/gzip arch/arm/cpu/armv7/hi3516cv610/hw_compressed/ -rf
+chmod +x arch/arm/cpu/armv7/hi3516cv610/hw_compressed/gzip
+make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- u-boot-z.bin
+
+
+cd /home/disk2/sdk/wya/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0/smp/a7_linux/source/bsp/components/gsl
+make clean
+make CHIP=hi3516cv610
+cd ../..
+cp ../../../../open_source/u-boot/u-boot-2022.07/u-boot-hi3516cv610.bin ./tools/pc/image_tool/input/u-boot-original.bin
+cp tools/pc/boot_tools/reg_info.bin ./tools/pc/image_tool/input
+cd tools/pc/image_tool
+python oem/oem_quick_build.py
