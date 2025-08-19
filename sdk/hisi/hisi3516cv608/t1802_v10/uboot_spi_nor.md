@@ -13,3 +13,7 @@ cp ../../../../open_source/u-boot/u-boot-2022.07/u-boot-hi3516cv610.bin ./tools/
 cp tools/pc/boot_tools/reg_info.bin ./tools/pc/image_tool/input
 cd tools/pc/image_tool
 python oem/oem_quick_build.py
+
+
+/home/disk2/sdk/wya/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0/smp/a7_linux/source/bsp/tools/pc/image_tool/image/oem
+目录下生成--->boot_image.bin
