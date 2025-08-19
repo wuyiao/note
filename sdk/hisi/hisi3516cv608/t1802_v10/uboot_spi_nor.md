@@ -9,7 +9,7 @@ chmod +x arch/arm/cpu/armv7/hi3516cv610/hw_compressed/gzip
 make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- u-boot-z.bin
 
 
-
+--------------------------------------------------------------------------------------------------
 
 
 cd /home/disk2/sdk/wya/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0/smp/a7_linux/source/bsp/components/gsl
