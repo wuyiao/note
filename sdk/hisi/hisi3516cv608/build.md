@@ -10,8 +10,11 @@
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- -j 20
 
 ## kernel
+    cp arch/arm/configs/hi3516cv610_nor_mini_defconfig .config
     make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- menuconfig
-    make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=0 -j
+    make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- uImage
+   
+//    make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=0 -j
 
 ## 整编
     在 smp/a7_linux/source/bsp 目录下执行 make 命令整编小系统镜像:
