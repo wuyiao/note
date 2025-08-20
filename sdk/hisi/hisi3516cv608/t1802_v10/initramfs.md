@@ -17,5 +17,13 @@
     setenv bootcmd 'sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000'
     setenv bootargs 'mem=32m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw root=/dev/mtdblock3 rootfstype=jffs2 mtdparts=sfc:512K(boot),512K(env),5M(kernel),8M(rootfs)'
     saveenv
+config配置
+
+    CONFIG_USE_BOOTARGS=y
+    CONFIG_BOOTARGS="mem=32m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw root=/dev/mtdblock3 rootfstype=jffs2 mtdparts=sfc:512K(boot),512K(env),5M(kernel),8M(rootfs)"
+    CONFIG_USE_BOOTCOMMAND=y
+    CONFIG_BOOTCOMMAND="sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000"
+
+
 # 验证
 直接到etc下面建个目录，断电重启后看是否还在，断电消失说明配置没问题
