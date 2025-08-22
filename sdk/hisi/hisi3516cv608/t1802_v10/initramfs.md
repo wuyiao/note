@@ -7,6 +7,10 @@
     CONFIG_INITRAMFS_ROOT_GID=0
     CONFIG_BLK_DEV_INITRD=y
 
+单编
+
+    make LIB_TYPE=musl CHIP=hi3516cv610 DEBUG=1 kernel
+
 # 烧录
 之前的文件系统不用烧了，这个kernel中有内嵌的
 烧录时注意修改对应的大小，因为新的uImage变大了，修改对应长度
