@@ -6,4 +6,4 @@
     /bin/busybox telnetd -l /bin/sh &
 # nfs
     mkdir -p /mnt/disk/nfs
-    mount -o nolock 192.168.2.239:/home/disk2/nfs_share /mnt/disk/nfs/
+    mount -o nolock 192.168.2.239:/home/disk2/nfs_share/wya/t1802 /mnt/disk/nfs/
