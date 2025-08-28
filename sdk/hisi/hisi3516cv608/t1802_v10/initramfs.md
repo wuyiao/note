@@ -31,3 +31,7 @@ config配置
 
 # 验证
 直接到etc下面建个目录，断电重启后看是否还在，断电消失说明配置没问题
+
+# env文件配置
+目录：/home/disk2/sdk/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0/smp/a7_linux/source/bsp/tools/pc/uboot_env/env_text/hi3516cv610/nor_env.txt
+
