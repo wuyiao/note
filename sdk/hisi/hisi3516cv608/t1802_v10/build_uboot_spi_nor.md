@@ -1,3 +1,5 @@
+单编------不对
+
 cp configs/hi3516cv610_defconfig .config
 
 make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- -j 20
