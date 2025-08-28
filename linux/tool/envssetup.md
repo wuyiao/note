@@ -1,8 +1,7 @@
 # source /home/disk2/user/cxj/envsetup.sh
 ## 查找源码中字符
     cgrep xxxxxx
-## 查找文件
-    godir xxxxxx
+## ......
 ### envsetup.sh
 
     function hmm() {
