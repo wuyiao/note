@@ -1,0 +1,7 @@
+用户名密码保存目录：/etc/shadow
+用 openssl passwd -6 <你的密码> 生成 SHA-512 hash
+openssl passwd -6 jmvrnd
+生成的
+$6$RptSmMDbpVwprjrR$SPS4Gdk/tP1mZq1vqHJVitygXYi15iTYQWKt0uBjelCqiij0x1xfMZCccXDpjTu4PkRS.q9MjQlyhUx.wWdde/
+最终文件
+root:$6$RptSmMDbpVwprjrR$SPS4Gdk/tP1mZq1vqHJVitygXYi15iTYQWKt0uBjelCqiij0x1xfMZCccXDpjTu4PkRS.q9MjQlyhUx.wWdde/:0:0:99999:7:::
