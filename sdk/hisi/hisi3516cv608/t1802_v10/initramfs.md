@@ -19,17 +19,28 @@
 修改对应配置，烧录是配置长度为5M，现在就命令行修改对应配置验证，无误后再修改uboot源码
 
     setenv bootcmd 'sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000'
-    setenv bootargs 'mem=32m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw root=/dev/mtdblock3 rootfstype=jffs2 mtdparts=sfc:512K(boot),512K(env),5M(kernel),10M(rootfs)'
+    setenv bootargs 'mem=32M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),-(rootfs)'
     saveenv
-
-    mem=32M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),10M(rootfs)
 config配置
 
     CONFIG_USE_BOOTARGS=y
-    CONFIG_BOOTARGS="mem=32m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw root=/dev/mtdblock3 rootfstype=jffs2 mtdparts=sfc:512K(boot),512K(env),5M(kernel),8M(rootfs)"
+    CONFIG_BOOTARGS="bootargs=mem=32M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),-(rootfs)"
     CONFIG_USE_BOOTCOMMAND=y
     CONFIG_BOOTCOMMAND="sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000"
 
+
+ubi文件构建
+
+    mkfs.ubifs -r mtd/ -m 1 -e 65408 -c 160 -o rootfs.img
+    ubinize -o rootfs.ubi -m 1 -p 64KiB -s 1 ubinize.cfg
+    
+    [ubifs]
+    mode=ubi
+    vol_id=0
+    vol_type=dynamic
+    vol_name=rootfs
+    vol_flags=autoresize
+    image=rootfs.img
 
 # 验证
 直接到etc下面建个目录，断电重启后看是否还在，断电消失说明配置没问题
