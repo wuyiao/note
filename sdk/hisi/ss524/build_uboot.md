@@ -30,22 +30,22 @@
     CONFIG_BOOTCOMMAND="mmc read 0x0 0x4a000000 0x800 0x7800;bootm 0x4a000000"
 
   ## nand
-    # printenv 
     arch=arm
     baudrate=115200
     board=ss524v100
     board_name=ss524v100
-    bootargs=mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),5M(kernel),32M(rootfs.ubifs)
-    bootcmd=nand read 0x42000000 0x100000 0x500000;bootm 0x42000000
+    bootargs=mem=256M console=ttyAMA0,115200 clk_ignore_unused ubi.mtd=2 root=ubi0:ubifs rootfstype=ubifs rw mtdparts=nand:1M(boot),10M(kernel),115M(rootfs.ubifs),2M(logo)
+    bootcmd=nand read 0x5a000000 0x7e00000 0x200000;decjpgadv 0 18 0 0x60000000;nand read 0x42000000 0x100000 0xA00000; bootm 0x42000000
     bootdelay=2
     cpu=armv7
     ethact=eth0
+    jpeg_addr=0x5a000000
+    jpeg_emar_buf=0x5b000000
+    jpeg_size=0x200000
     soc=ss524v100
     stderr=serial
     stdin=serial
     stdout=serial
     vendor=vendor
     verify=n
-    
-    Environment size: 396/262140 bytes
-    # 
+    vobuf=0x60000000
