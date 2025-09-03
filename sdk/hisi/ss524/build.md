@@ -1,5 +1,7 @@
 单编，不要整编，整编会自动生成新的rootfs把旧的删掉
 
+	make ARCH=arm CROSS_COMPILE=arm-mix410-linux- kernel
+
 1.osdrv 顶层 Makefile 使用说明
 本目录下的编译脚本支持 arm-mix410-linux 工具链，arm-mix410-linux 对应glibc库。
 具体命令如下(以ss524v100举例)
