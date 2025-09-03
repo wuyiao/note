@@ -1,2 +1,2 @@
 /etc/profile
-export TZ='CST-8'
+export TZ='GMT'
