@@ -1,0 +1,2 @@
+/etc/profile
+export TZ='CST-8'
