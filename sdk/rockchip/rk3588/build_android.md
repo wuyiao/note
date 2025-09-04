@@ -1,8 +1,12 @@
 # 系统固件编译
 ## 安卓系统源码
 ### 1.3588 有两套安卓系统源码，r10  和  r12 ，这两个版本都是Android12，目前代码已经都迁移到 r12，只是有些项目还未编译验证。下面标红的分支是已经编译验证过的系统
+
+
     r10: /home/touch/projects/rk3588/rk3588_Android12/
     r12: /home/touch/projects/rk3588/rk3588_Android12_r12/rk3588_Android12/
+
+    
 
 3588 的项目有多个，怎么区分，目前的做法是，内核创建了分支，除了测试用的分支，基本一个分支对应一个版型，而且分支的名字按照板子上的丝印来。安卓系统怎么区分项目，在安卓源码目录下创建了 custom/project_compile.sh 定义项目所需的环境变量，修改编译脚本，根据这些环境变量来决定编译行为，安卓系统基本上就不分板子的前后迭代版本，比如S8500V20和S8500V33，都是用S8500来替代。
 
@@ -43,20 +47,21 @@ touch@bestom-Precision-Tower-7910:kernel-5.10$ git branch #以下标红的分支
 git checkout S8500_V33-rkr12
 
 
-export PATH=../prebuilts/clang/host/linux-x86/clang-r416183b/bin:$PATH
-alias msk='make CROSS_COMPILE=aarch64-linux-gnu- LLVM=1 LLVM_IAS=1'
-msk ARCH=arm64 rockchip_defconfig android-11.config pcie_wifi.config
-msk ARCH=arm64 BOOT_IMG=../rockdev/Image-rk3588_s/boot.img rk3588-evb4-lp4-v10.img -j12
+    export PATH=../prebuilts/clang/host/linux-x86/clang-r416183b/bin:$PATH
+    alias msk='make CROSS_COMPILE=aarch64-linux-gnu- LLVM=1 LLVM_IAS=1'
+    msk ARCH=arm64 rockchip_defconfig android-11.config pcie_wifi.config
+    msk ARCH=arm64 BOOT_IMG=../rockdev/Image-rk3588_s/boot.img rk3588-evb4-lp4-v10.img -j12
 目录下会生成boot.img，这就是内核镜像，如果板子已经有跑系统的情况下，源码只修改了内核部分，则烧录boot.img就可以，也不需要下一步编译系统。
 
 1.2编译系统，回到kernel-5.10的上一级目录，然后执行以下命令
-source build/envsetup.sh
-vi custom/project_compile.sh #修改这个脚本，把里面Project变量赋值为 S8500
-source custom/project_compile.sh
-lunch 52
-make installclean # 这个步骤不是必须的，如果上一次编译的时候也是8500这个项目，就不需要
-./mk_kernel.sh # 编译安卓和内核
-./my_build.sh -u # 打包成一个镜像
+
+    source build/envsetup.sh
+    vi custom/project_compile.sh #修改这个脚本，把里面Project变量赋值为 S8500
+    source custom/project_compile.sh
+    lunch 52
+    make installclean # 这个步骤不是必须的，如果上一次编译的时候也是8500这个项目，就不需要
+    ./mk_kernel.sh # 编译安卓和内核
+    ./my_build.sh -u # 打包成一个镜像
 
 补充：带4g或5g模块的项目稍微麻烦，3588平台，目前 S80A，S302都带有这类模块，
 
