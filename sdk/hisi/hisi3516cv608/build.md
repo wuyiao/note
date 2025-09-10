@@ -15,7 +15,7 @@
 ## kernel
 修改hi3516cv610_debug_defconfig
 
-    make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=0 -j
+    make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=1 -j
 
 ## 整编
     在 smp/a7_linux/source/bsp 目录下执行 make 命令整编小系统镜像:
