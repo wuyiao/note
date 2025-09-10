@@ -1,3 +1,6 @@
+# 先解压缩解包
+    tar -zxvf Hi3516CV610_SDK_V1.0.2.0.tgz
+    ./sdk.unpack 
 # sdk
 ### 将下载好的linux版本压缩包放在SDK版本包中的open_source/linux/目录下
     https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.10.221.tar.gz 
