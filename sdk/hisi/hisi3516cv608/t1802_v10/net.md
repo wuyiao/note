@@ -12,3 +12,6 @@
 # nfs
     mkdir -p /mnt/disk/nfs
     mount -t nfs -o vers=3,proto=tcp,nolock 192.168.2.239:/home/disk2/nfs_share/wya/t1802 /mnt/disk/nfs/
+
+# ---    
+    ./sample_fast_ae 100 1024 1024 1024 100 45000 1024 1024 1024
