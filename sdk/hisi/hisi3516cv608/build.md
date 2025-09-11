@@ -20,7 +20,7 @@
 ## 整编
     在 smp/a7_linux/source/bsp 目录下执行 make 命令整编小系统镜像:
     make all
-    默认编译参数为:
+    
     make LIB_TYPE=musl CHIP=hi3516cv610 DEBUG=1 all
     编译参数说明：
     a. BOOT_MEDIA默认选择spi启动方式编译，可选择emmc启动方式编译,即
