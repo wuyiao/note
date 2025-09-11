@@ -19,12 +19,12 @@
 修改对应配置，烧录是配置长度为5M，现在就命令行修改对应配置验证，无误后再修改uboot源码
 
     setenv bootcmd 'sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000'
-    setenv bootargs 'mem=32M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),-(rootfs)'
+    setenv bootargs 'mem=64M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),-(rootfs)'
     saveenv
 config配置
 
     CONFIG_USE_BOOTARGS=y
-    CONFIG_BOOTARGS="bootargs=mem=32M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),-(rootfs)"
+    CONFIG_BOOTARGS="bootargs=mem=64M earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused initcall_debug rw ubi.mtd=3 root=ubi0:rootfs rootfstype=ubifs mtdparts=sfc:512K(boot),512K(env),5M(kernel),-(rootfs)"
     CONFIG_USE_BOOTCOMMAND=y
     CONFIG_BOOTCOMMAND="sf probe 0; sf read 0x41000000 0x100000 0x500000; bootm 0x41000000"
 
