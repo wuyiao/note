@@ -1,0 +1,1555 @@
+
+/nfs/wya_dx # cat /proc/umap/mipi_rx
+
+Module: [MIPI_RX], Build Time[Sep 16 2025, 10:08:26]
+
+--------------------------------------------------lane_mode-------------------------------------------------------------
+lane_mode        :4          |                             |                             |                             |
+--------------------------------------------------port_attr-------------------------------------------------------------
+port_id          :0          |work_mode        :mipi       |data_rate        :x1         |data_type        :raw_12     |
+img_rect_x       :0          |img_rect_y       :0          |img_width        :3840       |img_height       :2160       |
+lane_id          :0,1,2,3    |wdr_mode         :none       |ext_dt_1         :0x2c       |ext_dt_width_1   :12         |
+ext_dt_2         :0x2c       |ext_dt_width_2   :12         |ext_dt_3         :0x2c       |ext_dt_width_3   :12         |
+--------------------------------------------------clk_status------------------------------------------------------------
+sensor_clk       :Y          |mipi_clk         :Y          |                             |                             |
+--------------------------------------------------phy_info--------------------------------------------------------------
+phy_id           :0          |phy_en           :Y          |                             |                             |
+phy_d0_term_en   :Y          |phy_d1_term_en   :Y          |phy_d2_term_en   :Y          |phy_d3_term_en   :Y          |
+lane0_en         :Y          |lane1_en         :Y          |lane2_en         :Y          |lane3_en         :Y          |
+lane0_map        :0x0        |lane1_map        :0x1        |lane2_map        :0x2        |lane3_map        :0x3        |
+cil_d0_cur_stat  :LP11       |cil_d0_nxt_stat  :LP11       |cil_d1_cur_stat  :LP11       |cil_d1_nxt_stat  :HS_LP00    |
+cil_d2_cur_stat  :HS_LP00    |cil_d2_nxt_stat  :HS_LP00    |cil_d3_cur_stat  :HS_LP00    |cil_d3_nxt_stat  :HS_LP00    |
+cil_clk_cur_stat :HS_LP00    |cil_clk_nxt_stat :HS_LP00    |cil_clk2_cur_stat:IDLE       |cil_clk2_nxt_stat:IDLE       |
+--------------------------------------------------data_detect-----------------------------------------------------------
+phy_id           :0          |freq_measure     :712MHz     |                             |                             |
+lane0_data       :0xfc       |lane1_data       :0xf5       |lane2_data       :0x45       |lane3_data       :0xe3       |
+mipi_ph_d0       :0x2b       |mipi_ph_d1       :0xc0       |mipi_ph_d2       :0x12       |mipi_ph_d3       :0x3c       |
+mipi_data0       :0x3a       |mipi_data1       :0x50       |mipi_data2       :0x38       |mipi_data3       :0xa8       |
+mipi_vc0_w       :3840       |mipi_vc0_h       :2160       |mipi_vc1_w       :0          |mipi_vc1_h       :0          |
+mipi_vc2_w       :0          |mipi_vc2_h       :0          |mipi_vc3_w       :0          |mipi_vc3_h       :0          |
+--------------------------------------------------phy_err_irq-----------------------------------------------------------
+phy_id           :0          |                             |                             |                             |
+clk_fsm_tmout    :0          |clk_fsm_escape   :0          |d0_fsm_tmout     :0          |d1_fsm_tmout     :0          |
+d2_fsm_tmout     :0          |d3_fsm_tmout     :0          |d0_err_escape    :0          |d1_err_escape    :0          |
+d2_err_escape    :0          |d3_err_escape    :0          |                             |                             |
+--------------------------------------------------mipi_err--------------------------------------------------------------
+vc0_crc_err      :0          |vc1_crc_err      :0          |vc2_crc_err      :0          |vc3_crc_err      :0          |
+vc0_ecc_err      :0          |vc1_ecc_err      :0          |vc2_ecc_err      :0          |vc3_ecc_err      :0          |
+vc0_frm_num_err  :0          |vc1_frm_num_err  :0          |vc2_frm_num_err  :0          |vc3_frm_num_err  :0          |
+vc0_frm_mismatch :0          |vc1_frm_mismatch :0          |vc2_frm_mismatch :0          |vc3_frm_mismatch :0          |
+vsync_cnt        :13         |rd_data_fifo_err :0          |wr_data_fifo_err :0          |rd_cmd_fifo_err  :0          |
+wr_cmd_fifo_err  :0          |data_fifo_n_emt  :0          |cmd_fifo_n_emt   :0          |                             |
+--------------------------------------------------align_err-------------------------------------------------------------
+fifo_ovfl        :0          |lane0_fifo_ovfl  :0          |lane1_fifo_ovfl  :0          |lane2_fifo_ovfl  :0          |
+lane3_fifo_ovfl  :0          |                             |                             |                             |
+--------------------------------------------------diagnosis-------------------------------------------------------------
+/nfs/wya_dx # cat /proc/umap/*
+
+[AB] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------ab pub config-------------------------------------------------------------------
+
+[ACODEC] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------acodec total status-------------------------------------------------------------
+i2s1_fs          :(null)     |i2s1_width       :16bit      |mixer_left       :in0_right  |mixer_right      :in0_left   |
+adc_clk          :fall       |dac_clk          :fall       |ana_mclk         :fall       |adc_hpf          :y          |
+dac_deemph       :none       |init_mode        :normal     |power_state      :up         |tune_rate        :0          |
+
+----------------------------------------acodec volume status------------------------------------------------------------
+gain_left        :6          |gain_right       :6          |boost_left       :0          |boost_right      :0          |
+adc_left_volume  :0          |adc_right_volume :0          |dac_left_volume  :0          |dac_right_volume :0          |
+mic_left_mute    :n          |mic_right_mute   :n          |dac_left_mute    :n          |dac_right_mute   :n          |
+
+----------------------------------------acodec power status-------------------------------------------------------------
+pd_linein_left   :n          |pd_linein_right  :n          |pd_adc_left      :n          |pd_adc_right     :n          |
+pd_dac_left      :n          |pd_dac_right     :n          |                 :           |                 :           |
+
+----------------------------------------acodec track status-------------------------------------------------------------
+adc_left_sel     :left       |adc_right_sel    :right      |dac_left_sel     :left       |dac_right_sel    :right      |
+
+[ADEC] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------adec chn attr-------------------------------------------------------------------
+chn_id  payload_type  adpcm_type  buf_size       g726_rate    mode  orig_send_cnt   send_cnt    get_cnt    put_cnt
+
+[AENC] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------aenc chn attr-------------------------------------------------------------------
+chn_id  payload_type  adpcm_type  point_num  buf_size       g726_rate
+
+----------------------------------------aenc chn status-----------------------------------------------------------------
+chn_id  recv_frame  ai_queue_lost     enc_ok   enc_zero  frame_err   buf_full  get_stream  release_stream  mute
+
+[AI] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------ai dev attr---------------------------------------------------------------------
+ai_dev  i2s_type  work_mode  sample_rate  bit_width  chn_cnt  clk_share  snd_mode  point_num  expand_flag  frame_num
+
+----------------------------------------ai dev status0------------------------------------------------------------------
+ai_dev  interrupt_cnt   fifo_cnt  buf_full_cnt  frame_time  min_frame_time  max_frame_time  trans_len  isr_time
+
+----------------------------------------ai dev status1------------------------------------------------------------------
+ai_dev  min_isr_time  max_isr_time    cb_phys  cb_size  read_offset  write_offset
+
+----------------------------------------ai dev extend status------------------------------------------------------------
+ai_dev  track_mode  mute  volume  dmic_gain
+
+----------------------------------------ai chn status0------------------------------------------------------------------
+ai_dev  ai_chn   state    mode   buf_full  depth      data0      data1   user_get  user_release    aie_get  aie_release
+
+----------------------------------------ai chn status1------------------------------------------------------------------
+ai_dev  ai_chn   state  raw_frame_en   raw_lost    raw_get  raw_release
+
+----------------------------------------ai chn resample status----------------------------------------------------------
+ai_dev  ai_chn   state  resample_open  point_num  in_rate  out_rate
+
+----------------------------------------ai chn vqe status0--------------------------------------------------------------
+ai_dev  ai_chn   state  vqe_open  work_state    rate  point_num  write_file  vqe_type  anr  agc  aec   eq  hpf  rnr  drc
+
+----------------------------------------ai chn vqe status1--------------------------------------------------------------
+ai_dev  ai_chn   state  peq  hdr  talkv2_pnr  talkv2_nr  talkv2_agc  talkv2_eq
+
+[AIISP] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------aiisp framework: 2023112000-----------------------------------------------------
+
+
+[AO] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------ao dev attr---------------------------------------------------------------------
+ao_dev  i2s_type  work_mode  sample_rate  bit_width  chn_cnt  clk_share  snd_mode  point_num  expand_flag  frame_num
+
+----------------------------------------ao dev status0------------------------------------------------------------------
+ao_dev  interrupt_cnt   fifo_cnt  buf_empty_cnt  frame_time  min_frame_time  max_frame_time  trans_len  isr_time
+
+----------------------------------------ao dev status1------------------------------------------------------------------
+ao_dev  min_isr_time  max_isr_time    cb_phys  cb_size  read_offset  write_offset
+
+----------------------------------------ao dev extend status------------------------------------------------------------
+ao_dev  track_mode  mute  volume
+
+----------------------------------------ao chn status-------------------------------------------------------------------
+ao_dev  ao_chn   state    read   write   buf_empty      data0      data1  resample_open  point_num  in_rate  out_rate
+
+----------------------------------------ao chn vqe status0--------------------------------------------------------------
+ao_dev  ao_chn   state  vqe_open  work_state    rate  point_num  anr  agc   eq  hpf   hs  write_file
+
+[CHNL] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+total chnl scheduler count: 2
+
+----------------------------------scheduler 0 info------------------
+ scheduler_id   vpu_num
+            0         1
+
+
+----------------------------------------scheduler:0--vpu info-----------------------------------------------------------
+ vpu_id    name state    int_cnt   timer_cnt     vpu_cnt    err_cnt  query_cnt   start_ok  start_num  config_ok    reset
+      0  VEDU_0 pause       8598        7819         779          0      20312        779          0        779        0
+
+
+----------------------------------------scheduler:0--chnl state---------------------------------------------------------
+  chn_id  priority    type  task_num   state   query_cnt    start_ok   start_num  interrupt_num
+       0         0   h265e         0    idle           0           0           0              0
+       1         0   h265e         0    idle         779         779           0            779
+
+
+----------------------------------------scheduler:0--chnl performance---------------------------------------------------
+  chn_id    type  start_cost  interrupt_cost  max_interrupt_cost   hw_cost  hw_cycle    max_hw_cost
+       0   h265e           0               0                   0         0         0              0
+       1   h265e           0               0                   0         0         0              0
+
+
+----------------------------------------scheduler:0--chnl current run state---------------------------------------------
+  vpu_id    vpu_name      chn_id      reg_id        type
+
+----------------------------------scheduler 1 info------------------
+ scheduler_id   vpu_num
+            1         1
+
+
+----------------------------------------scheduler:1--vpu info-----------------------------------------------------------
+ vpu_id    name state    int_cnt   timer_cnt     vpu_cnt    err_cnt  query_cnt   start_ok  start_num  config_ok    reset
+      0  JPGE_0 pause          0           0           0          0          0          0          0          0        0
+
+
+----------------------------------------scheduler:1--chnl state---------------------------------------------------------
+  chn_id  priority    type  task_num   state   query_cnt    start_ok   start_num  interrupt_num
+
+
+----------------------------------------scheduler:1--chnl performance---------------------------------------------------
+  chn_id    type  start_cost  interrupt_cost  max_interrupt_cost   hw_cost  hw_cycle    max_hw_cost
+
+
+----------------------------------------scheduler:1--chnl current run state---------------------------------------------
+  vpu_id    vpu_name      chn_id      reg_id        type
+
+
+[CIPHER] Version: [HI3516CV610_MPP_V1.0.0.0 B010 Release], Build Time[Sep 16 2025, 10:09:26]
+
+
+---------------------------------------- cipher status -----------------------------------------------------------------
+chn_id   status   decrypt   alg   mode   key_len     addr in/out    key_from   int_raw  int_en   int_status   iv_out
+  00     close      ENC     TDES  ECB      64    00000000/00000000    SW          0        0         0       00000000000000000000000000000000
+  01     close      ENC     TDES  ECB      64    00000000/00000000    SW          0        0         0       00000000000000000000000000000000
+  02     close      ENC     TDES  ECB      64    00000000/00000000    SW          0        0         0       00000000000000000000000000000000
+
+[H264E] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------module param--------------------------------------------------------------------
+     one_pack     h264_vb_src    power_save_en   mini_buf_mode      qp_hist_en
+            0         private                1               0               0
+
+----------------------------------------chn attr------------------------------------------------------------------------
+     id  max_width  max_height   width  height   profile  color_to_grey  buf_size  by_frame  gop_mode  max_stream_cnt
+
+----------------------------------------picture info--------------------------------------------------------------------
+     id     enc_start   enc_succeed      copy    lost     discard      p_skip      recode  release_stream  unread_stream
+
+----------------------------------------stream buffer-------------------------------------------------------------------
+     id                  base   read_tail   read_head  write_tail  write_head    data_len    buf_free
+
+----------------------------------------ref_param info------------------------------------------------------------------
+     id  pred_en       base  enhance  used_frame  max_used_frame  rcn_ref_share_buf_en  frame_buf_ratio  force_i_blk_cnt
+
+----------------------------------------roi_bg info---------------------------------------------------------------------
+     id   bg_src_frame_rate   bg_dst_frame_rate
+
+----------------------------------------syntax info1--------------------------------------------------------------------
+     id  slice_split_en  split_mode  slice_size  slice_output_en  intra_refresh_en   refresh_mode    refresh_num  qp_idr
+
+----------------------------------------syntax info2--------------------------------------------------------------------
+     id   profile  entrpy_i  entrpy_p  entrpy_b  trans_i  trans_p  scaling_list_valid   poc  dblk_idc   alpha    beta
+
+----------------------------------------pu info-------------------------------------------------------------------------
+     id   constrained_intra       search_window            hor            ver
+
+----------------------------------------skip_coef / scene info / param_set_id / bitrate_strategy------------------------
+     id          fg_skip_coef           bg_skip_coef     scene_mode   param_set_id   bitrate_strategy
+
+----------------------------------------cu_prediction-------------------------------------------------------------------
+     id  pred_mode    inter8_cost   inter16_cost    intra4_cost    intra8_cost   intra16_cost
+
+----------------------------------------skip bias-----------------------------------------------------------------------
+     id   skip_bias_en      gain    offset     foreground_cost     background_cost
+
+----------------------------------------md------------------------------------------------------------------------------
+     id  online_en  sad_mode          gain           offset          qp_delta       skip_weight
+
+----------------------------------------deblur--------------------------------------------------------------------------
+     id   deblur_en  deblur_adaptive_en
+
+----------------------------------------adv_deblur----------------------------------------------------------------------
+     id  near_bg_en  gain  offset  qp_delta  min_qp  max_qp  far_bg_en  far_qp_delta  far_min_qp  far_max_qp
+
+[H265E] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------module param--------------------------------------------------------------------
+     one_pack        h265_vb_src      power_save_en      mini_buf_mode        qp_hist_en
+            0            private                  1                  0                 0
+
+----------------------------------------chn attr------------------------------------------------------------------------
+     id  max_width  max_height   width  height   profile  color_to_grey  buf_size  by_frame  gop_mode  max_stream_cnt
+      0       3840        2160    3840    2160        mp              n   6220800         y  normal_p             200
+      1        720         480     720     480        mp              n    259200         y  normal_p             200
+
+----------------------------------------picture info--------------------------------------------------------------------
+     id     enc_start   enc_succeed      copy    lost     discard      p_skip      recode  release_stream  unread_stream
+      0             0             0         0       0           0           0           0               0              0
+      1           779           779         0       0           0           0           0             779              0
+
+----------------------------------------stream buffer-------------------------------------------------------------------
+     id                  base   read_tail   read_head  write_tail  write_head    data_len    buf_free
+      0            0xca200000         0x0         0x0         0x0         0x0           0     6221760
+      1            0xca800000     0x1bf00     0x1bf00     0x1bf00     0x1bf00           0      262080
+
+----------------------------------------ref_param info------------------------------------------------------------------
+     id  pred_en       base  enhance  used_frame  max_used_frame  rcn_ref_share_buf_en  frame_buf_ratio  force_i_blk_cnt
+      0        y          1        0           0               0                     y               75                0
+      1        y          1        0           1               2                     y               75                0
+
+----------------------------------------roi_bg info---------------------------------------------------------------------
+     id   bg_src_frame_rate   bg_dst_frame_rate
+      0                  -1                  -1
+      1                  -1                  -1
+
+----------------------------------------syntax info1--------------------------------------------------------------------
+     id  slice_split_en  split_mode  slice_size  slice_output_en  intra_refresh_en   refresh_mode    refresh_num  qp_idr
+      0               n         n/a         n/a              n/a                 n            n/a            n/a     n/a
+      1               n         n/a         n/a              n/a                 n            n/a            n/a     n/a
+
+----------------------------------------syntax info2--------------------------------------------------------------------
+     id   dblk_en   tc_offset   beta_offset  across_slc  across_tile    sao_luma  sao_chroma   entrpy_flag
+      0         1           0             0           1            1           1           1             0
+      1         1           0             0           1            1           1           1             0
+
+----------------------------------------syntax info3--------------------------------------------------------------------
+     id    time_info_flag       num_in_tick        time_scale    diff_one
+      0                 n               n/a               n/a         n/a
+      1                 n               n/a               n/a         n/a
+
+----------------------------------------pu info-------------------------------------------------------------------------
+     id   constrained_intra     intra_smoothing  search_window            hor            ver
+      0                   0                   1           auto              0              0
+      1                   0                   1           auto              0              0
+
+----------------------------------------trans info----------------------------------------------------------------------
+     id   cb_qp_offset   cr_qp_offset
+      0             -3             -3
+      1             -3             -3
+
+----------------------------------------skip_coef / scene info / param_set_id / bitrate_strategy------------------------
+     id          fg_skip_coef           bg_skip_coef     scene_mode   param_set_id   bitrate_strategy
+      0                     8                      8        scene_0              0               auto
+      1                     8                      8        scene_0              0               auto
+
+----------------------------------------cu_prediction-------------------------------------------------------------------
+     id  pred_mode       inter_cost: 8  16  32  64       intra_cost: 4   8  16  32
+      0       auto                   8   8   8   8                   8   8   8   8
+      1       auto                   8   8   8   8                   8   8   8   8
+
+----------------------------------------skip bias-----------------------------------------------------------------------
+     id   skip_bias_en      gain    offset     foreground_cost     background_cost
+      0              n         8         8                  10                  10
+      1              n         8         8                  10                  10
+
+----------------------------------------md------------------------------------------------------------------------------
+     id  online_en  sad_mode          gain           offset          qp_delta       skip_weight
+      0          n      zero [  0   0   0] [   0    0    0] [  0   0   0   0] [  0   0   0   0]
+      1          n      zero [  0   0   0] [   0    0    0] [  0   0   0   0] [  0   0   0   0]
+
+----------------------------------------deblur--------------------------------------------------------------------------
+     id   deblur_en  deblur_adaptive_en
+      0           n                   n
+      1           n                   n
+
+----------------------------------------adv_deblur----------------------------------------------------------------------
+     id  near_bg_en  gain  offset  qp_delta  min_qp  max_qp  far_bg_en  far_qp_delta  far_min_qp  far_max_qp
+      0           n     8       8         1       0      51          n             1           0          51
+      1           n     8       8         1       0      51          n             1           0          51
+
+[ISP] Version: [HI3516CV610_MPP_V1.0.0.0 B010 Release], Build Time[Sep 16 2025, 10:08:57]
+
+
+
+----------------------------------------isp proc pipe[0]----------------------------------------------------------------
+
+
+----------------------------------------module/control param------------------------------------------------------------
+ proc_param   stat_intvl   update_pos  int_bothalf  int_timeout   pwm_number   run_wakeup
+         30            1            0            0          200            7            0
+
+ port_int_delay  quick_start   ldci_tprflten  long_frm_int_en   be_buf_num  ob_update_pos  alg_run_sel
+              0            0               0                0            8      frame end       normal
+
+----------------------------------------isp mode------------------------------------------------------------------------
+ stitch_mode    running_mode       block_num      data_mode    run_once
+      normal        striping               2            raw           0
+
+----------------------------------------sensor info---------------------------------------------------------------------
+ sensor_type       dev
+         i2c         0
+
+----------------------------------------drv info------------------------------------------------------------------------
+   vi_pipe        int_cnt          int_t      max_int_t      avg_int_t      int_gap_t      max_gap_t        int_rat
+         0           1565            302            339            307          50000          50008             20
+
+  int_type     pt_int_cnt       pt_int_t   pt_max_int_t   pt_int_gap_t   pt_max_gap_t     pt_int_rat      reset_cnt
+     start              0              0              0              0              0              0              2
+
+ fe_stat_t  fe_stat_max_t      cp_stat_t  cp_stat_max_t      be_stat_t  be_stat_max_t   be_stat_lost
+        13             15             21             29            180            190              0
+
+  be_end_t   be_end_max_t   sensor_cfg_t   sensor_max_t   sensor_avg_t
+        30             33              6             43              6
+
+ sync_cfg_gap    sync_cfg_gap_max    sync_cfg_gap_min   ldci_comp_err_cnt      stitch_pts_cnt     sync_id_err_cnt
+        50000               50009               49993                   0                   0                   0
+
+     usr_t      max_usr_t       cros_cnt     cros_end_t     cros_usr_t     cros_run_t  cros_switch_t    cros_lock_t
+      1431           3384              0              0              0              0              0              0
+
+ cros_pre_run_t      cros_pre_swi_t     cros_pre_lock_t
+              0                   0                   0
+
+----------------------------------------be_cfg info---------------------------------------------------------------------
+ be_cfg[ 0,  3]:          0x466a2000          0x466c0400          0x466de800          0x466fcc00
+
+ be_cfg[ 4,  7]:          0x4671b000          0x46739400          0x46757800          0x46775c00
+
+      free        busy         use    hold_max
+         6           2           1           1
+
+----------------------------------------pubattr info--------------------------------------------------------------------
+     wnd_x       wnd_y       wnd_w       wnd_h       sns_w       sns_h    sns_mode      flip      mirror       bayer
+         0           0        3840        2160        3840        2160           0         0           0        bggr
+
+   crop_en      crop_x      crop_y      crop_w      crop_h    wdr_mode
+         0           0           0        3840        2160      linear
+
+----------------------------------------send raw isp frame info---------------------------------------------------------
+
+----------------------------------------share mem info------------------------------------------------------------------
+   share_all_en    share[0]    share[1]    share[2]    share[3]    share[4]
+              0
+
+
+
+[AE] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+----------------------------------------ae info-------------------------------------------------------------------------
+   sys_gain       line  ae_inter  in_crmnt                 exp    1st_time
+       1032         80         1       256                 895   1500000
+
+       comp    ev_bias    ori_ave     offset      speed       tole     error       fps  real_fps   b_delay   w_delay
+         64       1024         66          0         64          2        -2     20.00      2000         8         0
+
+   max_line  max_linet    max_agt    max_dgt   max_idgt    max_sgt   manu_en   ma_line     ma_ag     ma_dg  ma_ispdg
+       4489      65535      48768      16256       4096    3096768         0         0         0         0         0
+
+   wdr_mode    anflick   slow_mod    gain_th   au_ir_en    ir_type   ma_ir_en  dbg_ir_st   stat_pos
+     linear          0          1    3096768          0    dc_iris          0          0         FE
+
+  face_luma   pep_luma  noroi_cnt   exp_coef
+          0          0          0       1024
+
+        node_id       int_time       sys_gain       iris_ape        up_stgy        dw_stgy              mltply
+              0              8           1024              1              0              4                8192
+              1           4489           1024              1              1              0             4596736
+              2           4489        3096768              1              4              1         13901391552
+
+
+----------------------------------------isp ae info---------------------------------------------------------------------
+      again      dgain     isp_dg        iso
+       1024       1024       1032        100
+
+    int_time[0]    int_time[1]    int_time[2]    int_time[3]   ae_inter       sns_ratio
+          14222              0              0              0          1              64
+
+    piris_valid      piris_pos     piris_gain     hmax_times       vmax
+              0              0              1          11111       4500
+
+
+
+[AWB] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+----------------------------------------awb info------------------------------------------------------------------------
+  manuen     sat   zones   speed
+       0     128      32     256
+
+sector_en    hue0    hue1    hue2    hue3    hue4    hue5
+        0      20      20      20      20      20      20
+
+             sat0    sat1    sat2    sat3    sat4    sat5
+               20      20      20      20      20      20
+
+----------------------------------------isp awb info--------------------------------------------------------------------
+   gain0   gain1   gain2   gain3  cotemp
+   0x1de   0x100   0x100   0x1f1    5263
+
+ color00 color01 color02 color10 color11 color12 color20 color21 color22
+   0x1a0  0x809f  0x8001  0x8066   0x1a7  0x8041  0x800c  0x80f1   0x1fd
+
+
+----------------------------------------dpc info------------------------------------------------------------------------
+      enable    strength blend_ratio
+           1           0           0
+
+----------------------------------------crosstalk info------------------------------------------------------------------
+      enable       slope sensi_slope   threshold    sensi_th    strength   np_offset
+           1           9           9         300         300         128        1024
+
+----------------------------------------fswdr info----------------------------------------------------------------------
+    mdt_en  long_thr   short_thr   md_thr_low_gain  md_thr_high_gain
+         1      3008        4032                 0                 0
+
+----------------------------------------fpn correct info----------------------------------------------------------------
+      en op_type  strength offset0 offset1
+       0      --        --      --      --
+
+----------------------------------------black level actual info---------------------------------------------------------
+      mode   user_en  isp_blc_r isp_blc_gr isp_blc_gb  isp_blc_b  sns_blc_r sns_blc_gr sns_blc_gb  sns_blc_b
+      auto         0       1040       1040       1040       1040       1040       1040       1040       1040
+
+----------------------------------------bayernr info--------------------------------------------------------------------
+    enable     md_en  nr_lsc_enable  fine_strength   sfm0_de_prot       tss     coring_wgt
+         1         1              0            128             16         0             50
+
+    sfm0_coarse_str1    sfm0_coarse_str2    sfm0_coarse_str3    sfm0_coarse_str4       ref_mode    load_ref_en
+                 108                 108                 108                 108        md_mode              0
+
+   md_mode       tfs   md_sta_ratio        md_mot_ratio     md_sta_fine_str
+         2       255             26                  13                  32
+
+     md_anti_fli_str         user_def_md      user_def_slope       user_def_dark       sfr_r       sfr_g       sfr_b
+                  32                   0                   0                  90          26          32          26
+
+   snr_sfm0_wdr_str0   snr_sfm0_wdr_str1   snr_sfm0_wdr_str3   snr_sfm0_fus_str0   snr_sfm0_fus_str1
+                  16                  16                  16                  16                  16
+
+         md_wdr_str0         md_wdr_str1         md_fus_str0         md_fus_str1
+                  16                  16                  16                  16
+
+   bnr_proc_iso              k              b
+            100       0.016695       0.041794
+
+
+----------------------------------------acs info------------------------------------------------------------------------
+      enable      y_strength    run_interval     lock_enable
+           0             256               2               0
+
+----------------------------------------drc info------------------------------------------------------------------------
+              en         manu_en        strength
+               0               1             256
+
+----------------------------------------dehaze info---------------------------------------------------------------------
+          enable         manu_en   manu_strength   auto_strength
+               0               0               0               0
+
+----------------------------------------cac info------------------------------------------------------------------------
+          enable     edge_thr[0]     edge_thr[1]       edge_gain cac_rb_strength
+               1             100             500              16               3
+    satu_low_thd    purple_alpha      edge_alpha          cr_str          cb_str
+              25              63              63               0               3
+
+----------------------------------------demosaic info-------------------------------------------------------------------
+          enable      nondir_str   nondir_mf_str          hf_str   de_smth_range
+               1              48              82               0               2
+
+----------------------------------------anti false color info-----------------------------------------------------------
+          en   threshold    strength
+           1          20          24
+
+----------------------------------------sharpen info--------------------------------------------------------------------
+      sharpen_en
+               1
+luma_wgt(0-15):
+     31     31     31     31     31     31     31     31     31     31     31     31     31     31     31     31
+
+luma_wgt(16-31):
+     30     28     26     25     25     25     25     25     25     25     25     25     25     25     25     25
+
+texture_strength(0-15):
+     88     95    104    116    127    139    150    156    160    163    165    166    166    165    164    161
+
+texture_strength(16-31):
+    157    152    147    140    133    125    117    111    103     95     87     78     70     62     57     52
+
+edge_strength(0-15):
+    183    186    191    197    203    209    214    219    221    224    226    228    229    229    229    228
+
+edge_strength(16-31):
+    226    224    221    219    215    211    205    199    191    182    171    159    149    139    130    123
+
+edge_gain_by_rly(0-15):
+     32     32     32     32     32     32     32     32     32     32     32     32     32     32     32     32
+
+edge_rly_by_mot(0-15):
+     16     16     16     16     16     16     16     16     16     16     16     16     16     16     16     16
+
+edge_rly_by_luma(0-15):
+     16     16     16     16     16     16     16     16     16     16     16     16     16     16     16     16
+
+mf_gain_by_mot(0-15):
+     32     32     32     32     32     32     32     32     32     32     32     32     32     32     32     32
+
+hf_gain_by_mot(0-15):
+     32     32     32     32     32     32     32     32     32     32     32     32     32     32     32     32
+
+lmf_gain_by_mot(0-15):
+     16     16     16     16     16     16     16     16     16     16     16     16     16     16     16     16
+
+texture_freq   edge_freq  over_shoot under_shoot   shoot_sup_str detail_ctrl
+         200         128          50          60               7         128
+
+ edge_filt_str   edge_filt_max_cap  r_gain  g_gain  b_gain   skin_gain
+            58                  18      12      32      18          30
+
+ shoot_sup_adj   detail_ctrl_thr  max_sharp_gain   skin_umax   skin_umin   skin_vmax   skin_vmin
+             9               160              30         127          99         150         134
+
+ shoot_inner_threshold shoot_outer_threshold shoot_protect_threshold
+                     0                     0                       0
+
+ edge_rly_fine_threshold edge_rly_coarse_threshold edge_over_shoot  edge_under_shoot
+                       0                         0              20               120
+
+
+----------------------------------------ldci info-----------------------------------------------------------------------
+ enable  manual  gauss_lpf_sigma  he_pos_wgt  he_pos_sigma  he_pos_mean  he_neg_wgt  he_neg_sigma  he_neg_mean  blc_ctrl
+      1       0               36          48            80           32          60            80          128        20
+
+----------------------------------------ca info-------------------------------------------------------------------------
+ enable   iso_ratio
+      1        1024
+
+----------------------------------------alg run time info---------------------------------------------------------------
+        ae:  642       awb: 1245       dpc:   11        nr:   94   sharpen:   20      ldci:   33       all:  2130
+
+----------------------------------------isp proc end[0]-----------------------------------------------------------------
+
+
+[IVE] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------ive module param----------------------------------------------------------------
+                          save_power                         max_node_num
+                                   1                                   64
+
+----------------------------------------ive queue info------------------------------------------------------------------
+         wait      busy     wait_cur_id   wait_end_id   busy_cur_id   busy_end_id
+           0         0             0             0             0             0
+
+----------------------------------------ive task info-------------------------------------------------------------------
+        handle     task_finish       last_id     task_id     handle_wrap     finish_wrap
+             0               0             0          63               0               0
+
+----------------------------------------ive runtime info----------------------------------------------------------------
+    last_inst    cnt_per_sec   max_cnt_per_sec    total_int_cnt_last_sec      total_int_cnt           qt_cnt    st_cnt
+            0              0                 0                         0                  0                0         0
+
+      cost_tm      m_cost_tm   cost_tm_per_sec         m_cost_tm_per_sec  total_int_cost_tm  last_task_hw_tm
+            0              0                 0                         0                  0                0
+
+       run_tm
+           78
+
+----------------------------------------ive invoke info-----------------------------------------------------------------
+
+       dma          filter        csc       sobel      mag_ang          dilate           erode   threshold
+         0               0          0           0            0               0               0           0
+
+       and             sub         or       integ         hist      thresh_s16      thresh_u16       16to8
+         0               0          0           0            0               0               0           0
+
+       map ord_stat_filter equal_hist         add          xor             ncc             ccl       canny
+         0               0          0           0            0               0               0           0
+
+       lbp       norm_grad         LK  sot_tomasi          sad            gmm2          resize persp_trans
+         0               0          0           0            0               0               0           0
+
+       acc  alpha_blending  image_dot
+         0               0          0
+
+[JPEGE] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------module param--------------------------------------------------------------------
+       one_pack      jpege_mini_buf_mode    jpeg_clear_stream_buf
+              0                        0                        1
+
+----------------------------------------attribute1----------------------------------------------------------------------
+    id  is_mjpeg  pic_type  max_width  max_height  width  height  buf_size  by_frm  color_to_grey  dcf
+
+----------------------------------------param---------------------------------------------------------------------------
+    id  mcu_per_ecs  qfactor  ecs_output_en      dering_en   dering_level  dblk_en  batch_crop_en    batch_crop_num
+
+----------------------------------------state1--------------------------------------------------------------------------
+    id    buf_len   free_len  stream_cnt  max_stream
+
+----------------------------------------state2--------------------------------------------------------------------------
+    id  pic_recv   pic_coded   pic_droped   pic_discard  no_stm_cnt   rc_fail   pic_recode  unread_stream
+
+----------------------------------------stream buffer-------------------------------------------------------------------
+     id                  base   read_tail   read_head  write_tail  write_head     buf_len    data_len    buf_free
+
+----------------------------------------run info------------------------------------------------------------------------
+    id  dcf_size  mpf_ex_offset  src_size   mpf0_size   mpf1_size   mpf_cnt jpeg_queue_idx
+----------------------------------------log buffer state----------------------------------------------------------------
+max_len(KB)  read_pos write_pos butt_pos
+         64         0     11183    65074
+
+----------------------------------------current log level---------------------------------------------------------------
+vb      :  3
+sys     :  3
+region  :  3
+base    :  3
+vpss    :  3
+venc    :  3
+h264e   :  3
+jpege   :  3
+h265e   :  3
+vi      :  3
+chnl    :  3
+rc      :  3
+aio     :  3
+ai      :  3
+ao      :  3
+aenc    :  3
+adec    :  3
+vpu     :  3
+isp     :  3
+ive     :  3
+vgs     :  3
+vca     :  3
+pm      :  3
+vpp     :  3
+svp_npu :  3
+venc_svr        :  3
+ab      :  3
+aiisp   :  3
+acodec  :  3
+svac3e  :  3
+
+[MD] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------md chn attr---------------------------------------------------------------------
+no.    w    h alg sad_mode  sad_out_ctrl sad_thr ccl_mode  ccl_init_thr  ccl_step   xwt   ywt  frm_rate  cost_tm_per_frm
+ anony=1 mmz_allocator=ot mem_process_isolation=0
+
++---ZONE: PHYS(0x44000000, 0x47FFFFFF), GFP=0, nBYTES=65536KB,    NAME="anonymous"
+   |-MMB: phys(0x44000000, 0x44006FFF), kvirt=0xC4828000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=28KB,    name="vca_scale_coef"
+   |-MMB: phys(0x44007000, 0x44026FFF), kvirt=0xC80A0000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=128KB,    name="vgs_node_buf"
+   |-MMB: phys(0x44027000, 0x44034FFF), kvirt=0x00000000, flags=0x0, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=56KB,    name="vedu_hal_0"
+   |-MMB: phys(0x44035000, 0x4404AFFF), kvirt=0xC5B60000, flags=0x3, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=88KB,    name="venc_shm"
+   |-MMB: phys(0x4404B000, 0x4404CFFF), kvirt=0xC49B2000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=8KB,    name="svp_npu_share_mem"
+   |-MMB: phys(0x4404D000, 0x44089FFF), kvirt=0xC6100000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=244KB,    name="ive_npu_om"
+   |-MMB: phys(0x4408A000, 0x4408AFFF), kvirt=0xC6E7E000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vb_pool_sup_nc"
+   |-MMB: phys(0x4408B000, 0x4408BFFF), kvirt=0xC6E9D000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vb_pool_sup_c"
+   |-MMB: phys(0x4408C000, 0x4408CFFF), kvirt=0xC6EC0000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vb_pool_sup_nc"
+   |-MMB: phys(0x4408D000, 0x4408DFFF), kvirt=0xC6EC2000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vb_pool_sup_c"
+   |-MMB: phys(0x4408E000, 0x4408EFFF), kvirt=0xC6EC4000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vb_pool_sup_nc"
+   |-MMB: phys(0x4408F000, 0x4408FFFF), kvirt=0xC6EC6000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vb_pool_sup_c"
+   |-MMB: phys(0x44090000, 0x44090FFF), kvirt=0xC6F00000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=4KB,    name="ive_tmp_node"
+   |-MMB: phys(0x44091000, 0x44091FFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="isp[0].ldci"
+   |-MMB: phys(0x44092000, 0x4409BFFF), kvirt=0xC8090000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=40KB,    name="isp[0].drc"
+   |-MMB: phys(0x4409C000, 0x4409CFFF), kvirt=0xC6F7D000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="isp[0].trans"
+   |-MMB: phys(0x4409D000, 0x4409DFFF), kvirt=0xC5AA7000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=4KB,    name="crypto_hash_node_buffer"
+   |-MMB: phys(0x4409E000, 0x4409EFFF), kvirt=0xC5AA9000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=4KB,    name="crypto_symc_node_buffer"
+   |-MMB: phys(0x4409F000, 0x440A2FFF), kvirt=0xC5AE4000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=16KB,    name="crypto_kapi_symc_dma_buffer"
+   |-MMB: phys(0x440A3000, 0x4643BFFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=36452KB,    name="vb_pool"
+   |-MMB: phys(0x4643C000, 0x465B7FFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=1520KB,    name="vb_pool"
+   |-MMB: phys(0x465B8000, 0x4665FFFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=672KB,    name="vb_pool"
+   |-MMB: phys(0x46660000, 0x46671FFF), kvirt=0xC6FE0000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=72KB,    name="ive_queue"
+   |-MMB: phys(0x46672000, 0x46681FFF), kvirt=0xC80D0000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=64KB,    name="vi(0)_model_0"
+   |-MMB: phys(0x46682000, 0x466A1FFF), kvirt=0xC9220000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=128KB,    name="isp[0].vreg[0]"
+   |-MMB: phys(0x466A2000, 0x46793FFF), kvirt=0xC9C80000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=968KB,    name="isp[0].be_cfg"
+   |-MMB: phys(0x46794000, 0x467AFFFF), kvirt=0xC8A60000, flags=0x3, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=112KB,    name="isp[0].be_stt"
+   |-MMB: phys(0x467B0000, 0x467B1FFF), kvirt=0xC6F74000, flags=0x3, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=8KB,    name="isp[0].fe_stt"
+   |-MMB: phys(0x467B2000, 0x467D0FFF), kvirt=0xC95E0000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=124KB,    name="isp[0].stat"
+   |-MMB: phys(0x467D1000, 0x467D6FFF), kvirt=0xC6F98000, flags=0x3, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=24KB,    name="isp[0].fe_stat"
+   |-MMB: phys(0x467D7000, 0x467DAFFF), kvirt=0xC6F78000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=16KB,    name="isp[0].proc"
+   |-MMB: phys(0x467DB000, 0x467DCFFF), kvirt=0xC6F92000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=8KB,    name="isp[0].vreg[1]"
+   |-MMB: phys(0x467DD000, 0x467DDFFF), kvirt=0xC6F95000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="isp[0].vreg[2]"
+   |-MMB: phys(0x467DE000, 0x46869FFF), kvirt=0xC9D80000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=560KB,    name="vi(0)_bnr_rnt"
+   |-MMB: phys(0x4686A000, 0x46BADFFF), kvirt=0xC9E80000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=3344KB,    name="vi(0)_bnr_ref0"
+   |-MMB: phys(0x46BAE000, 0x46BB0FFF), kvirt=0xC6FBC000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=12KB,    name="vpss(0)_model"
+   |-MMB: phys(0x46BB1000, 0x46BB1FFF), kvirt=0xC6FBA000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vpss(0)_wrap_ld_pool_sup_nc"
+   |-MMB: phys(0x46BB2000, 0x46BB2FFF), kvirt=0xC6FD6000, flags=0x3, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=4KB,    name="vpss(0)_wrap_ld_pool_sup_c"
+   |-MMB: phys(0x46BB3000, 0x46BB3FFF), kvirt=0xC6FFC000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=4KB,    name="h265e0_node"
+   |-MMB: phys(0x46BB4000, 0x471A4FFF), kvirt=0xCA200000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=6084KB,    name="h265e0_stm0"
+   |-MMB: phys(0x471A5000, 0x471C8FFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=144KB,    name="h265e0_info0"
+   |-MMB: phys(0x471C9000, 0x471ECFFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=144KB,    name="h265e0_info1"
+   |-MMB: phys(0x471ED000, 0x47C54FFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=10656KB,    name="h265e0_rcn0"
+   |-MMB: phys(0x47C55000, 0x47C55FFF), kvirt=0xC787B000, flags=0x1, kernel_only=1, share_all=1 pid[0,0,0,0,0], length=4KB,    name="h265e1_node"
+   |-MMB: phys(0x47C56000, 0x47C97FFF), kvirt=0xCA800000, flags=0x1, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=264KB,    name="h265e1_stm0"
+   |-MMB: phys(0x47C98000, 0x47C99FFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=8KB,    name="h265e1_info0"
+   |-MMB: phys(0x47C9A000, 0x47C9BFFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=8KB,    name="h265e1_info1"
+   |-MMB: phys(0x47C9C000, 0x47D36FFF), kvirt=0x00000000, flags=0x0, kernel_only=0, share_all=1 pid[0,0,0,0,0], length=620KB,    name="h265e1_rcn0"
+
+---MMZ_USE_INFO:
+ total size=65536KB(64MB),used=62684KB(61MB + 220KB),remain=2852KB(2MB + 804KB),zone_number=1,block_number=48
+
+Module: [MIPI_RX], Build Time[Sep 16 2025, 10:08:26]
+
+--------------------------------------------------lane_mode-------------------------------------------------------------
+lane_mode        :4          |                             |                             |                             |
+--------------------------------------------------port_attr-------------------------------------------------------------
+port_id          :0          |work_mode        :mipi       |data_rate        :x1         |data_type        :raw_12     |
+img_rect_x       :0          |img_rect_y       :0          |img_width        :3840       |img_height       :2160       |
+lane_id          :0,1,2,3    |wdr_mode         :none       |ext_dt_1         :0x2c       |ext_dt_width_1   :12         |
+ext_dt_2         :0x2c       |ext_dt_width_2   :12         |ext_dt_3         :0x2c       |ext_dt_width_3   :12         |
+--------------------------------------------------clk_status------------------------------------------------------------
+sensor_clk       :Y          |mipi_clk         :Y          |                             |                             |
+--------------------------------------------------phy_info--------------------------------------------------------------
+phy_id           :0          |phy_en           :Y          |                             |                             |
+phy_d0_term_en   :Y          |phy_d1_term_en   :Y          |phy_d2_term_en   :Y          |phy_d3_term_en   :Y          |
+lane0_en         :Y          |lane1_en         :Y          |lane2_en         :Y          |lane3_en         :Y          |
+lane0_map        :0x0        |lane1_map        :0x1        |lane2_map        :0x2        |lane3_map        :0x3        |
+cil_d0_cur_stat  :HS_LP00    |cil_d0_nxt_stat  :LP11       |cil_d1_cur_stat  :LP11       |cil_d1_nxt_stat  :LP11       |
+cil_d2_cur_stat  :LP11       |cil_d2_nxt_stat  :HS_LP00    |cil_d3_cur_stat  :HS_LP00    |cil_d3_nxt_stat  :HS_LP00    |
+cil_clk_cur_stat :HS_LP00    |cil_clk_nxt_stat :HS_LP00    |cil_clk2_cur_stat:IDLE       |cil_clk2_nxt_stat:IDLE       |
+--------------------------------------------------data_detect-----------------------------------------------------------
+phy_id           :0          |freq_measure     :712MHz     |                             |                             |
+lane0_data       :0xe4       |lane1_data       :0xd        |lane2_data       :0xd0       |lane3_data       :0x49       |
+mipi_ph_d0       :0x2b       |mipi_ph_d1       :0xc0       |mipi_ph_d2       :0x12       |mipi_ph_d3       :0x3c       |
+mipi_data0       :0x0        |mipi_data1       :0x0        |mipi_data2       :0x52       |mipi_data3       :0xcd       |
+mipi_vc0_w       :3840       |mipi_vc0_h       :2160       |mipi_vc1_w       :0          |mipi_vc1_h       :0          |
+mipi_vc2_w       :0          |mipi_vc2_h       :0          |mipi_vc3_w       :0          |mipi_vc3_h       :0          |
+--------------------------------------------------phy_err_irq-----------------------------------------------------------
+phy_id           :0          |                             |                             |                             |
+clk_fsm_tmout    :0          |clk_fsm_escape   :0          |d0_fsm_tmout     :0          |d1_fsm_tmout     :0          |
+d2_fsm_tmout     :0          |d3_fsm_tmout     :0          |d0_err_escape    :0          |d1_err_escape    :0          |
+d2_err_escape    :0          |d3_err_escape    :0          |                             |                             |
+--------------------------------------------------mipi_err--------------------------------------------------------------
+vc0_crc_err      :0          |vc1_crc_err      :0          |vc2_crc_err      :0          |vc3_crc_err      :0          |
+vc0_ecc_err      :0          |vc1_ecc_err      :0          |vc2_ecc_err      :0          |vc3_ecc_err      :0          |
+vc0_frm_num_err  :0          |vc1_frm_num_err  :0          |vc2_frm_num_err  :0          |vc3_frm_num_err  :0          |
+vc0_frm_mismatch :0          |vc1_frm_mismatch :0          |vc2_frm_mismatch :0          |vc3_frm_mismatch :0          |
+vsync_cnt        :13         |rd_data_fifo_err :0          |wr_data_fifo_err :0          |rd_cmd_fifo_err  :0          |
+wr_cmd_fifo_err  :0          |data_fifo_n_emt  :0          |cmd_fifo_n_emt   :0          |                             |
+--------------------------------------------------align_err-------------------------------------------------------------
+fifo_ovfl        :0          |lane0_fifo_ovfl  :0          |lane1_fifo_ovfl  :0          |lane2_fifo_ovfl  :0          |
+lane3_fifo_ovfl  :0          |                             |                             |                             |
+--------------------------------------------------diagnosis-------------------------------------------------------------
+
+[PM] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+       svb_version:    SVB_20
+
+----------------------------------------compensation enable flag--------------------------------------------------------
+     core_tcomp_en:         1      cpu_tcomp_en:         0      npu_tcomp_en:         0
+    core_pacomp_en:         0     cpu_pacomp_en:         0     npu_pacomp_en:         0
+
+----------------------------------------voltage compensation value------------------------------------------------------
+    core_temp_comp:       -20     cpu_temp_comp:         0     npu_temp_comp:         0
+      core_pa_comp:         0       cpu_pa_comp:         0       npu_pa_comp:         0
+
+----------------------------------------current temperature and voltage-------------------------------------------------
+          cur_temp:        37     core_cur_volt:       900      cpu_cur_volt:         0      npu_cur_volt:         0
+
+[RC] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------base param 1--------------------------------------------------------------------
+     id    gop  stats_time  src_frame_rate  dst_frame_rate   type    mode  bitrate(kbps)  i_qp  p_qp  b_qp
+      0     40           2              20              20   H265     cbr          12288   n/a   n/a   n/a
+      1     40           2              20              20   H265     cbr            512   n/a   n/a   n/a
+
+----------------------------------------base param 2--------------------------------------------------------------------
+     id  min_qp  max_qp  min_vi_qp  max_vi_qp  min_i_qp  max_i_qp  vbv_buf_delay      idr_en    qpmap_en  qpmap_mode
+      0      10      51        n/a        n/a        10        51            n/a           y           n         n/a
+      1      10      51        n/a        n/a        10        51            n/a           y           n         n/a
+
+----------------------------------------base param 3--------------------------------------------------------------------
+     id     long_term_stats_time    short_term_stats_time    long_term_max_bitrate    long_term_min_bitrate
+
+----------------------------------------run common param 1--------------------------------------------------------------
+     id  row_qp_delta                 threshold_i(16)
+      0             1  [   0   0   0   0   3   3   5   5   8   8   8  15  15  20  25  25]
+      1             1  [   0   0   0   0   3   3   5   5   8   8   8  15  15  20  25  25]
+
+----------------------------------------run common param 2--------------------------------------------------------------
+     id  first_frame_start_qp            threshold_p(16)
+      0                    -1  [   0   0   0   0   3   3   5   5   8   8   8  15  15  20  25  25]
+      1                    -1  [   0   0   0   0   3   3   5   5   8   8   8  15  15  20  25  25]
+
+----------------------------------------run common param 3--------------------------------------------------------------
+     id      direction                 threshold_b(16)
+      0              8  [   0   0   0   0   3   3   5   5   8   8   8  15  15  20  25  25]
+      1              8  [   0   0   0   0   3   3   5   5   8   8   8  15  15  20  25  25]
+
+----------------------------------------run comm param 4----------------------------------------------------------------
+     id   lost   threshold   lost_mode   frame_gap  base_qp_delta_en  base_qp_delta
+      0      n    83886080      normal           0                 n              0
+      1      n    83886080      normal           0                 n              0
+
+----------------------------------------run comm param 5----------------------------------------------------------------
+     id   super_frame_mod   threshold_i   threshold_p   threshold_b   rc_priority  clear_stats  qp_delta max_lost_times
+      0              none        500000        500000        500000       bitrate            1         1              0
+      1              none        500000        500000        500000       bitrate            1         1              0
+
+----------------------------------------run common param 6--------------------------------------------------------------
+     id      detect_scene_chg_en   adapt_insert_idr_frame_en   out_rc_en
+      0                        y                           n           n
+      1                        y                           n           n
+
+----------------------------------------fg protect info 1---------------------------------------------------------------
+     id  protect_en      direction                    threshold_p(16)
+      0           0              8  [   0   0   0   0   0   0   0   0   5   5   5  15  15  20  25  25]
+      1           0              8  [   0   0   0   0   0   0   0   0   5   5   5  15  15  20  25  25]
+
+----------------------------------------fg protect info 2---------------------------------------------------------------
+     id        gain         offset                    threshold_b(16)
+      0           4              4  [   0   0   0   0   0   0   0   0   5   5   5  15  15  20  25  25]
+      1           4              4  [   0   0   0   0   0   0   0   0   5   5   5  15  15  20  25  25]
+
+----------------------------------------gop mode attr-------------------------------------------------------------------
+     id    gop_mode  ip_qp_delta  sp_interval  sp_qp_delta  b_frame_num   b_qp_delta  bg_interval  vi_qp_delta
+      0    normal_p            2          n/a          n/a          n/a          n/a          n/a          n/a
+      1    normal_p            2          n/a          n/a          n/a          n/a          n/a          n/a
+
+----------------------------------------run abr param-------------------------------------------------------------------
+     id  max_p_qp  min_p_qp  max_i_qp  min_i_qp  max_reencode_times
+
+----------------------------------------run cbr param-------------------------------------------------------------------
+     id  min_i_proportion  max_i_proportion  max_qp  min_qp  max_i_qp  min_i_qp  max_reencode_times
+      0                 1                20      51      10        51        10                   0
+      1                 1                20      51      10        51        10                   0
+
+----------------------------------------run vbr common param------------------------------------------------------------
+     id  chg_pos  min_i_proportion  max_i_proportion  max_qp  min_qp  max_i_qp  min_i_qp  max_reencode_times
+
+----------------------------------------run avbr param------------------------------------------------------------------
+     id   max_still_qp  motion_sensitivity   min_still_percent      min_still_psnr   min_qp_delta  save_bitrate_en
+
+----------------------------------------run qvbr param------------------------------------------------------------------
+     id   min_bit_percent   max_bit_percent  min_psnr_fluctuate  max_psnr_fluctuate
+
+----------------------------------------run cvbr param------------------------------------------------------------------
+     id  min_qp_delta  max_qp_delta   extra_bit_percent   long_term_stats_time_unit  save_bitrate_en
+
+----------------------------------------run info1-----------------------------------------------------------------------
+     id  inst_br:kbps inst_fr:fps     wat_l   cfg_bit:kb   real_bit:kb  ip_ratio  dst_percent  start_qp  min_qp  max_qp
+      0             0           0     15360            0             0         0          n/a         0       0       0
+      1           289          10         1           23            27         4          n/a        19      10      51
+
+----------------------------------------rc debreath_effect info---------------------------------------------------------
+     id    enable   strength0   strength1   debreath_effect_cnt
+      0         n         n/a         n/a                     0
+      1         n         n/a         n/a                     0
+
+----------------------------------------rc hierarchical_qp info---------------------------------------------------------
+     id   enable   frame_num[ 0   1   2  3]       qp_delta[ 0    1    2   3]
+      0        n              1   1   0  0                 -2   -4    0   0
+      1        n              1   1   0  0                 -2   -4    0   0
+
+[RGN] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+
+[SVAC3E] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------module param--------------------------------------------------------------------
+     one_pack       svac3_vb_src      power_save_en      mini_buf_mode        qp_hist_en
+            0            private                  1                  0                 0
+
+----------------------------------------chn attr------------------------------------------------------------------------
+     id  max_width  max_height   width  height   profile  color_to_grey  buf_size  by_frame  gop_mode  max_stream_cnt
+
+----------------------------------------picture info--------------------------------------------------------------------
+     id     enc_start   enc_succeed      copy    lost     discard      p_skip      recode  release_stream  unread_stream
+
+----------------------------------------picture info2-------------------------------------------------------------------
+     id    crr_au_cnt   no_disp_cnt
+
+----------------------------------------stream buffer-------------------------------------------------------------------
+     id                  base   read_tail   read_head  write_tail  write_head    data_len    buf_free
+
+----------------------------------------ref_param info------------------------------------------------------------------
+     id  pred_en       base  enhance  used_frame  max_used_frame  rcn_ref_share_buf_en  frame_buf_ratio  force_i_blk_cnt
+
+----------------------------------------roi_bg info---------------------------------------------------------------------
+     id   bg_src_frame_rate   bg_dst_frame_rate
+
+----------------------------------------syntax info1--------------------------------------------------------------------
+     id  slice_split_en  split_mode  slice_size  slice_output_en  intra_refresh_en   refresh_mode    refresh_num  qp_idr
+
+----------------------------------------syntax info2--------------------------------------------------------------------
+     id     dblk_en    dblk_param    c_offset   beta_offset across_patch    sao_luma  sao_chroma
+
+----------------------------------------search_window-------------------------------------------------------------------
+     id  search_window            hor            ver
+
+----------------------------------------trans info----------------------------------------------------------------------
+     id chroma_qp_disable   cb_qp_offset   cr_qp_offset
+
+----------------------------------------skip_coef / scene info / param_set_id / bitrate_strategy------------------------
+     id          fg_skip_coef           bg_skip_coef     scene_mode   param_set_id   bitrate_strategy
+
+----------------------------------------cu_prediction-------------------------------------------------------------------
+     id  pred_mode       inter_cost: 8  16  32  64       intra_cost: 4   8  16  32
+
+----------------------------------------skip bias-----------------------------------------------------------------------
+     id   skip_bias_en      gain    offset     foreground_cost     background_cost
+
+----------------------------------------md------------------------------------------------------------------------------
+     id  online_en  sad_mode          gain           offset          qp_delta       skip_weight
+
+----------------------------------------deblur--------------------------------------------------------------------------
+     id   deblur_en  deblur_adaptive_en
+
+----------------------------------------adv_deblur----------------------------------------------------------------------
+     id  near_bg_en  gain  offset  qp_delta  min_qp  max_qp  far_bg_en  far_qp_delta  far_min_qp  far_max_qp
+
+----------------------------------------emulation info------------------------------------------------------------------
+     id     stuff03_disable
+
+----------------------------------------crr split info------------------------------------------------------------------
+     id  split_num  delay_num    strategy   actual_split  split_stat
+
+----------------------------------------crr write back info-------------------------------------------------------------
+     chn_num  vb_used_flag  cur_chn
+           0             0       -1
+
+[SVP_NPU] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------svp_npu module param------------------------------------------------------------
+  npu_save_power  max_task_node_num  max_stream_num   max_event_num   prof_buf_size   ops_sel
+               1                 32               4               0            2048      1.0T
+
+----------------------------------------dev[0] svp_npu resource info----------------------------------------------------
+   max_model_num   max_sec_model_num  max_stream_num   max_event_num  max_report_num
+              32                   0               4               0              64
+  free_model_num  free_sec_model_num free_stream_num  free_event_num free_report_num
+              32                   0               4               0              64
+
+----------------------------------------svp_npu irq info----------------------------------------------------------------
+  device_id  irq_cnt_last_sec  max_irq_cnt_per_sec  total_irq_cnt
+          0                 0                    0              0
+
+  cur_irq_time  max_irq_time  irq_time_last_sec  max_irq_time_per_sec    total_irq_time
+             0             0                  0                     0                 0
+
+----------------------------------------svp_npu runtime info------------------------------------------------------------
+  device_id  hw_status      last_sq_id  last_task_node_id  prof_flag  mac_utilization
+          0          0               0                  0          0                0
+
+  timeout_err_cnt  hw_err_cnt  aicpu_err_cnt    last_hw_task_time hw_utilization   total_running_time
+                0           0              0                    0              0                  694
+
+ max_hw_task_time min_hw_task_time   max_node_cycle_cnt   min_node_cycle_cnt   cur_node_cycle_cnt
+                0                0                    0                    0                    0
+
+[SYS] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------0X3516C613----------------------------------------------------------------------
+
+----------------------------------------module param--------------------------------------------------------------------
+   profile
+         0
+
+----------------------------------------module status-------------------------------------------------------------------
+  sys_status  audio_status  3dnr_pos
+         run        exited       n/a
+
+----------------------------------------sync frame rate ctrl status-----------------------------------------------------
+   src_mod   src_dev   src_chn   dst_mod   dst_dev   dst_chn  is_start
+
+----------------------------------------syskol param--------------------------------------------------------------------
+  capture_mode    sleep_mode     cken_mask
+        NORMAL          NONE           0x0
+
+----------------------------------------scale coeff info----------------------------------------------------------------
+             range_level   range_value   hor_luma  hor_chroma   ver_luma  ver_chroma
+              RANGE_0   (    0,  8/64)    LEVEL_0     LEVEL_0    LEVEL_0     LEVEL_0
+              RANGE_1   [ 8/64, 10/64)    LEVEL_1     LEVEL_1    LEVEL_1     LEVEL_1
+              RANGE_2   [10/64, 15/64)    LEVEL_2     LEVEL_2    LEVEL_2     LEVEL_2
+              RANGE_3   [15/64, 19/64)    LEVEL_3     LEVEL_3    LEVEL_3     LEVEL_3
+              RANGE_4   [19/64, 24/64)    LEVEL_6     LEVEL_4    LEVEL_4     LEVEL_6
+              RANGE_5   [24/64, 29/64)    LEVEL_6     LEVEL_5    LEVEL_5     LEVEL_5
+              RANGE_6   [29/64, 33/64)    LEVEL_8    LEVEL_12    LEVEL_9    LEVEL_12
+              RANGE_7   [33/64, 35/64)    LEVEL_8    LEVEL_12    LEVEL_9    LEVEL_12
+              RANGE_8   [35/64, 38/64)    LEVEL_8    LEVEL_12    LEVEL_9    LEVEL_12
+              RANGE_9   [38/64, 42/64)    LEVEL_9     LEVEL_9    LEVEL_9     LEVEL_9
+              RANGE_10  [42/64, 45/64)   LEVEL_10    LEVEL_10   LEVEL_10    LEVEL_10
+              RANGE_11  [45/64, 48/64)   LEVEL_11    LEVEL_11   LEVEL_11    LEVEL_11
+              RANGE_12  [48/64, 51/64)   LEVEL_12    LEVEL_12   LEVEL_12    LEVEL_12
+              RANGE_13  [51/64, 53/64)   LEVEL_13    LEVEL_13   LEVEL_13    LEVEL_13
+              RANGE_14  [53/64, 55/64)   LEVEL_14    LEVEL_14   LEVEL_14    LEVEL_14
+              RANGE_15  [55/64, 57/64)   LEVEL_15    LEVEL_15   LEVEL_15    LEVEL_15
+              RANGE_16  [57/64, 60/64)   LEVEL_16    LEVEL_16   LEVEL_16    LEVEL_16
+              RANGE_17  [60/64,     1]   LEVEL_17    LEVEL_17   LEVEL_17    LEVEL_17
+              RANGE_18  (    1,   MAX)   LEVEL_18    LEVEL_18   LEVEL_18    LEVEL_18
+
+----------------------------------------mem table-----------------------------------------------------------------------
+     mod         mod_name     dev     chn         mmz_name
+
+----------------------------------------bind relation table-------------------------------------------------------------
+  fir_mod  fir_dev  fir_chn  sec_mod  sec_dev  sec_chn  tir_mod  tir_dev  tir_chn    send_cnt     rst_cnt
+     vpss        0        0     venc        0        0     null        0        0           0           0
+     vpss        0        1     venc        0        1     null        0        0           0           0
+       vi        0        0     vpss        0        0     venc        0        0         789           0
+
+[VB] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------vb pub config-------------------------------------------------------------------
+max_pool_cnt
+          96
+----------------------------------------vb supplement attr--------------------------------------------------------------
+  config    size   vb_cnt
+      10     768       22
+----------------------------------------common pool config--------------------------------------------------------------
+pool_id         0         1         2         3         4         5         6         7         8         9        10        11        12        13        14        15
+size     11750400  12441600    518400    687872         0         0         0         0         0         0         0         0         0         0         0         0
+count           0         3         3         1         0         0         0         0         0         0         0         0         0         0         0         0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+0       0x440a3000          0x0                 common    common  12441600  3       1       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+1     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     vi    1866240
+0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     vi    0
+sum   2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+1       0x4643c000          0x0                 common    common  518400    3       3       2        0       idle
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+2       0x465b8000          0x0                 common    common  687872    1       0       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+0     0     0     0     0     0     0     0     786   0     0     0     0     0     0     0     0     0     0     0     0     0     0     vpss  128
+sum   0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+3       0x467de000          0xc9d80000          private   vi      285184    2       0       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     vi    0
+1     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     vi    0
+sum   2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+4       0x4686a000          0xc9e80000          private   vi      3421440   1       0       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     vi    0
+sum   1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+5       0x46bb1000          0xc6fba000          private   vpss    128       6       6       6        0       idle
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+6       0x471a5000          0x0                 private   h265e   146944    1       1       1        0       idle
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+7       0x471c9000          0x0                 private   h265e   146944    1       1       1        0       idle
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+8       0x471ed000          0x0                 private   h265e   10910208  1       0       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     h265e 0
+sum   0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+9       0x47c98000          0x0                 private   h265e   6400      1       0       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     h265e 0
+sum   0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+10      0x47c9a000          0x0                 private   h265e   6400      1       1       0        0       idle
+------------------------------------------------------------------------------------------------------------------------
+pool_id phys_addr           virt_addr           pool_type owner   blk_sz    blk_cnt free    min_free reserve state
+11      0x47c9c000          0x0                 private   h265e   632832    1       0       0        0       idle
+blk   vi    vo    vgs   venc  vdec  h265e h264e vpss  dis   user  pciv  vfmw  gdc   avs   rect  match mcf   vda   vpp   aiisp uvc   svac3 get   free_bytes
+0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     h265e 0
+sum   0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+
+
+[VENC] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+----------------------------------------module param--------------------------------------------------------------------
+     venc_buf_cache     frame_buf_recycle      venc_max_chn_num          high_profile
+                  0                     0                     8                     n
+
+----------------------------------------venc chn attr 1-----------------------------------------------------------------
+      id   width  height   type  by_frame   sequence  left_bytes   left_frm  cur_packs  gop_mode  priority  buf_full_cnt
+       0    3840    2160   H265         y          0           0          0          0  normal_p         0             0
+       1     720     480   H265         y        785           0          0          1  normal_p         0             0
+
+----------------------------------------venc chn attr 2-----------------------------------------------------------------
+      id  started  src_frame_rate  dst_frame_rate    time_ref  pixel_format      pic_addr  wake_up_frame_cnt in_depth
+       0        n              -1              -1           1        yuv420           0x0                  1        3
+       1        y              -1              -1        3150        yvu420    0x464ba900                  1        3
+
+----------------------------------------venc chn attr 3-----------------------------------------------------------------
+      id  composite_en  mosaic_en quality_level  dup_frame_strategy svc_version  one_pack
+       0             n          n             1              RECODE          V1         n
+       1             n          n             1              RECODE          V1         n
+
+----------------------------------------venc chn recv state-------------------------------------------------------------
+      id       start    start_ex   recv_left    enc_left     jpeg_enc_mode
+       0           1           0           0           0               n/a
+       1           1           0           0           0               n/a
+
+----------------------------------------venc vpss query-----------------------------------------------------------------
+      id       query    query_ok  query_lost     invalid        full     vb_fail  query_fail    info_err        stop
+       0           0           0           0           0           0           0           0           0           0
+       1           0           0           0           0           0           0           0           0           0
+
+----------------------------------------venc send1----------------------------------------------------------------------
+      id  vpss_send  vpss_err  other_send  other_err       send    stop    full  crop_err  direct_send  size_err
+       0          0         0           0          0          0       0       0         0            0         0
+       1        785         0           0          0        785       0       0         0          785         0
+
+----------------------------------------venc send2----------------------------------------------------------------------
+      id    send_vgs    start_ok  start_fail  interrupt_ok  interrupt_fail     src_add     src_sub   dst_add   dst_sub
+       0           0           0           0             0               0           0           0         0         0
+       1           0           0           0             0               0           0           0         0         0
+
+----------------------------------------venc wrap info------------------------------------------------------------------
+      id      mode    frame_num       send    discard       done    miss_start    ring_back    ring_buffull
+       0       off
+       1       off
+
+----------------------------------------venc pic queue state------------------------------------------------------------
+      id           free           busy            vgs        b_frame         status        get_osd        put_osd
+       0              3              0              0              0        invalid              0              0
+       1              3              0              0              0        invalid            785              0
+
+----------------------------------------venc dcf/mpf queue state--------------------------------------------------------
+      id  thumb_free  thumb_busy   mpf0_free   mpf0_busy   mpf1_free   mpf1_busy
+       0           0           0           0           0           0           0
+       1           0           0           0           0           0           0
+
+----------------------------------------venc channel info---------------------------------------------------------------
+      id     query  query_ok    start  start_ok   config interrupt  ch_reso_lost  over_load  ring_skip  rc_skip zme_skip
+       0     10235         0        0         0        0         0             0          0          0        0        0
+       1     10235       785      785       785      785       785             0          0          0        0        0
+
+----------------------------------------venc crop info------------------------------------------------------------------
+      id        crop_en              x              y          width         height
+       0              n              0              0              0              0
+       1              n              0              0              0              0
+
+----------------------------------------roi info------------------------------------------------------------------------
+      id      type     index    roi_en    abs_qp    qp         x         y     width    height
+
+----------------------------------------jpeg roi info-------------------------------------------------------------------
+      id     index     level     bg_level         x         y     width    height
+
+----------------------------------------venc stream state---------------------------------------------------------------
+      id    free_cnt    busy_cnt    user_cnt    user_get   user_release   get_times    interval   frame_rate
+       0           0           0           0           0              0           0           0            0
+       1           2           0           0         865            865         785      150070           10
+
+----------------------------------------venc pts state------------------------------------------------------------------
+      id                 first_frame_pts                   cur_frame_pts           time_cost              user_qpmap_pts
+       0                               0                               0                   0                           0
+       1                       618560485                       696960464              122893                           0
+
+----------------------------------------venc svc state------------------------------------------------------------------
+      id  enable  base_reso_width  base_reso_height  rect_num               pts   version
+
+----------------------------------------venc svc param------------------------------------------------------------------
+      id  fg_en  fg_rgn_param0  fg_rgn_param1  fg_rgn_param2  fg_rgn_param3  fg_rgn_param4   bg_rgn_param  act_rgn_param
+
+----------------------------------------venc svc_v2 param---------------------------------------------------------------
+      id ref_num refresh_interval roi_type qp_delta
+
+----------------------------------------venc chn_capability:attr_capability---------------------------------------------
+      id  enable  type   max_width     max_height    buf_size rcn_ref_share_buf_en frame_buf_ratio
+       0       n    31        3840        2160       12441600                    n             100
+       1       n    31        3840        2160       12441600                    n             100
+
+----------------------------------------venc chn_capability:rc_capability-----------------------------------------------
+      id rc_mode min_gop max_gop max_stats_time  max_src_frame_rate max_short_term_stats_time  max_long_term_stats_time
+       0     511      30      30             30                  30                        30                       180
+       1     511      30      30             30                  30                        30                       180
+
+----------------------------------------venc chn_capability:gop_capability----------------------------------------------
+      id  gop_mode    crr_recode_strategy   min_bg_interval   max_bg_interval     skip_ref_en     max_frame_num
+       0       455                      1                30              1200               n                 3
+       1       455                      1                30              1200               n                 3
+
+----------------------------------------venc chn_capability:feature_capability------------------------------------------
+      id  user_data_en  watermark_en  deblur_en  quality_balance_en  md_en  jpeg_roi_en  bitrate_strategy  svc   ref_num
+       0             n             n          n                   n      n            n                 1    0         2
+       1             n             n          n                   n      n            n                 1    0         2
+
+[VGS] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------module param--------------------------------------------------------------------
+  g_max_job_num g_max_task_num g_max_node_num
+             64            100            100
+
+----------------------------------------recent job info1----------------------------------------------------------------
+  seq_no  mod_name job_hdl  task_num     state     in_size    out_size   cost_time     hw_time   vgs
+       0      vpss      37         1    proced      345600      345600         357           0     0
+       1        vi      36         1    proced     8294400     8294400         266           0     0
+       2      vpss      35         1    proced      345600      345600         314           0     0
+       3        vi      34         1    proced     8294400     8294400         259           0     0
+       4      vpss      33         1    proced      345600      345600         345           0     0
+       5        vi      32         1    proced     8294400     8294400         269           0     0
+       6      vpss      31         1    proced      345600      345600         318           0     0
+       7        vi      30         1    proced     8294400     8294400         257           0     0
+
+----------------------------------------max waste time job info1--------------------------------------------------------
+  seq_no  mod_name job_hdl  task_num     state     in_size    out_size   cost_time     hw_time   vgs
+       0      vpss      53         1    proced      345600      345600         383           0     0
+
+----------------------------------------recent job info2----------------------------------------------------------------
+  seq_no  crop  cover  mosaic  osd  zme  lba  luma  line  copy  ldc  rotate  bd  bypass  corner  fpd   gme  stitch  low_delay
+       0     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       1     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       2     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       3     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       4     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       5     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       6     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+       7     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+
+----------------------------------------max waste time job info2--------------------------------------------------------
+  seq_no  crop  cover  mosaic  osd  zme  lba  luma  line  copy  ldc  rotate  bd  bypass  corner  fpd   gme  stitch  low_delay
+       0     0      0       0    0    0    0     0     0     0    0       0   0       1       0    0     0       0          0
+
+----------------------------------------recent job info3----------------------------------------------------------------
+  seq_no       video_format        pixel_format       cmp_mode      mirror  flip  blend
+       0      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       1      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       2      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       3      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       4      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       5      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       6      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+       7      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+
+----------------------------------------max waste time job info3--------------------------------------------------------
+  seq_no       video_format        pixel_format       cmp_mode      mirror  flip  blend
+       0      LINEAR->LINEAR      YVU420->YVU420     NONE->NONE          0     0      0
+
+----------------------------------------vgs job status------------------------------------------------------------------
+   success           fail      cancel  all_job_num      free_num  begin_num   busy_num  procing_num
+         0              0           0           64            64          0          0            0
+
+----------------------------------------vgs task status-----------------------------------------------------------------
+   success           fail      cancel  all_task_num     free_num   busy_num
+         0              0           0          100           100          0
+
+----------------------------------------vgs node status-----------------------------------------------------------------
+ all_node_num    busy_num    min_free   max_in_job   submit_fail   int_fail  load_ratio_0
+          100           0         100            0             0          0            0%
+
+----------------------------------------vgs drv work status-------------------------------------------------------------
+  link_int    err_int  start_suc0 start_err0 node_err0
+         0          0           0          0         0
+
+[VI] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------vi module param-----------------------------------------------------------------
+   max_out_width  max_out_height  detect_err_frame  drop_err_frame
+            4096            4096                 0               0
+
+----------------------------------------vi vpss mode & vi aiisp mode----------------------------------------------------
+  pipe_id vi_vpss_mode              vi_aiisp_mode
+        0  vi_offline_vpss_offline    default
+        1  vi_offline_vpss_offline    default
+        2  vi_offline_vpss_offline    default
+        3  vi_offline_vpss_offline    default
+
+----------------------------------------vi dev attr1--------------------------------------------------------------------
+  dev_id  dev_status           intf_mode  work_mode  comp_mask0  comp_mask1    scan_mode
+       0      enable                mipi       1mux    fff00000           0  progressive
+
+----------------------------------------vi dev attr2--------------------------------------------------------------------
+  dev_id  data_seq  data_type  data_reverse  width  height  data_rate  irq_affinity
+       0      yvyu        raw             N   3840    2160         x1             0
+
+----------------------------------------vi dev detect info--------------------------------------------------------------
+  dev_id  valid_width  valid_height  em_data_size  total_width  vfb_height  vbb_height
+       0         3840          2160             0        10554           0          91
+
+----------------------------------------vi bind attr--------------------------------------------------------------------
+  dev_id  pipe_num             pipe_id
+       0         1                   0
+
+----------------------------------------vi wdr fusion grp attr----------------------------------------------------------
+  grp_id   wdr_mode  cache_line  pipe_num             pipe_id  pipe_reverse
+       0       none        2160         1                   0             N
+
+----------------------------------------vi distribute grp attr----------------------------------------------------------
+  grp_id  distribute_en   pipe_id             sync_time
+
+----------------------------------------vi pipe attr1-------------------------------------------------------------------
+  pipe_id  bypass_mode  isp_bypass  width  height                  pixel_format  compress_mode
+        0  bypass_none           N   3840    2160                         raw10           line
+
+----------------------------------------vi pipe attr2-------------------------------------------------------------------
+  pipe_id  bit_align_mode  src_rate  dst_rate  frame_source  vc_num  vb_src  vb_pool
+        0            high        -1        -1        src_fe       0  common       -1
+
+----------------------------------------vi aiisp pool attr--------------------------------------------------------------
+  pipe_id  aiisp_type  in_pool_id out_pool_id  net_type
+
+----------------------------------------vi pipe param-------------------------------------------------------------------
+  pipe_id  discard_pic_en  out_mode  data_rate  yuv_skip_en  signed_extend_en  bnr_info_en  nr_effect_mode  aibnr_debug
+        0               N      norm         x1            Y                 N            N         advance            N
+
+----------------------------------------vi pipe bnr buf num-------------------------------------------------------------
+  pipe_id  bnr_buf_num
+        0            2
+
+----------------------------------------vi pipe post crop attr----------------------------------------------------------
+  pipe_id  enable  rect_x  rect_y  rect_width  rect_height
+        0       N       0       0           0            0
+
+----------------------------------------vi pipe 3dnr attr---------------------------------------------------------------
+  pipe_id  enable     nr_type   compress_mode  nr_motion_mode
+        0       N        NORM           frame            NORM
+
+----------------------------------------vi pipe 3dnr param--------------------------------------------------------------
+
+----------------------------------------vi pipe frame dump attr---------------------------------------------------------
+  pipe_id  enable  depth
+        0       N      0
+
+----------------------------------------vi pipe low delay attr----------------------------------------------------------
+  pipe_id  enable  line_cnt  one_buf  one_buf_max_line
+        0       N         0        N                 0
+
+----------------------------------------vi pipe frame interrupt attr----------------------------------------------------
+  pipe_id  interrupt_type  early_line
+        0           start           0
+
+----------------------------------------vi pipe user pic attr-----------------------------------------------------------
+  pipe_id  enable  width  height  stride  pixel_format  pool_id        phy_addr
+        0       N      0       0       0           n/a        0               0
+
+----------------------------------------vi pipe wrap status-------------------------------------------------------------
+  pipe_id  wrap_en  buf_line    pts_gap   max_gap0   max_gap1  valid_line  wrap_err  pre_err
+        0        N         0        n/a        n/a        n/a         n/a       n/a      n/a
+
+----------------------------------------vi pipe status------------------------------------------------------------------
+  pipe_id  enable  int_en  width  height    int_cnt   send_cnt  lost_cnt  vb_fail_cnt   vb_reused frame_rate
+        0       Y       Y   3840    2160       1577        790         0          788           0         10
+
+----------------------------------------vi pipe offline task statistics-------------------------------------------------
+  pipe_id  receive_pic_cnt  busy_num  task_submit_cnt  task_fail_cnt  task_cost_time  max_cost_time
+        0              790         0              790              0           37051          37061
+
+----------------------------------------vi phys chn attr1---------------------------------------------------------------
+  pipe_id  chn_id  width  height  pixel_format  dynamic_range  video_format  compress_mode  mirror  flip
+        0       0   3840    2160     yvu-sp420           sdr8        linear           none       N     N
+
+----------------------------------------vi phys chn attr2---------------------------------------------------------------
+  pipe_id  chn_id  depth  src_rate  dst_rate  vb_src  vb_pool  align
+        0       0      0        -1        -1  common       -1      0
+
+----------------------------------------vi phys chn rotation attr-------------------------------------------------------
+ pipe_id  chn_id  rotation_type  enable    rotation
+       0       0          FIXED       N           0
+
+----------------------------------------vi ext chn attr1----------------------------------------------------------------
+  pipe_id  chn_id  bind_chn        src_type  width  height  pixel_format  dynamic_range  video_format  compress_mode
+
+----------------------------------------vi ext chn attr2----------------------------------------------------------------
+  pipe_id  chn_id  depth  src_rate  dst_rate  vb_src  vb_pool  align  buf_share_en
+
+----------------------------------------vi chn low delay attr-----------------------------------------------------------
+  pipe_id  chn_id  enable  line_cnt  one_buf
+        0       0       N         0        N
+
+----------------------------------------vi chn crop info----------------------------------------------------------------
+  pipe_id  chn_id  crop_en   coord       x       y   width  height  trim_x  trim_y  trim_width  trim_height
+        0       0        N     ABS       0       0       0       0
+
+----------------------------------------vi chn status-------------------------------------------------------------------
+  pipe_id  chn_id  enable  width  height     send_cnt  vb_fail_cnt  lost_frame_cnt  frame_rate
+        0       0       Y   3840    2160          790            0               0          10
+
+----------------------------------------vi chn out frame info-----------------------------------------------------------
+  pipe_id  chn_id  width  height  compress_mode  low_delay_frame       delay
+        0       0   3840    2160           none                N       87810
+
+----------------------------------------vi interrupt cost time statistics-----------------------------------------------
+  isp_time  isp_max_time  vicap_time  vicap_max_time  viproc_time  viproc_max_time  int_time_per_sec  load_ratio_0
+        22           350          30             724          425              452             17738           36%
+
+[VPSS] Version: [HI3516CV610_MPP_V1.0.2.0 B051 Release], Build Time[Apr 16 2025, 12:06:53]
+
+
+----------------------------------------vpss module param---------------------------------------------------------------
+   schedule_mode   max_out_width  max_out_height    high_profile
+          NORMAL            4096            4096               N
+
+----------------------------------------vpss grp cfg1-------------------------------------------------------------------
+  grp is_rotation_input_support is_dis_gyro_support     is_motion_denoise_support  is_dis_ref_support
+    0                         N                   N                             N                   N
+
+----------------------------------------vpss grp cfg2-------------------------------------------------------------------
+  grp   max_split_num max_out_rgn_num is_save_out_lut  out_lut_buf_size
+    0               2               1               N                 0
+
+----------------------------------------vpss grp attr1------------------------------------------------------------------
+  grp   max_w   max_h   pixel_fmt  src_rate  dst_rate   user_ctrl  backup
+    0    3840    2160   YVU-SP420        -1        -1           Y       N
+
+----------------------------------------vpss grp attr2------------------------------------------------------------------
+  grp  buf_share_en  buf_share_chn     dci      ie  dei_mode  dei_width  dei_height  mcf_en  act_buf_share
+    0             N              0       N       N       OFF          0           0       N              N
+
+----------------------------------------vpss grp crop info--------------------------------------------------------------
+  grp crop_en   coord     x     y   width  height    trim_x    trim_y  trim_width trim_height
+    0       N     ABS     0     0       0       0         0         0        3840        2160
+
+----------------------------------------frame interrupt attr------------------------------------------------------------
+  grp       int_type     early_line
+    0              -              0
+
+----------------------------------------vpss grp svc param--------------------------------------------------------------
+  grp  enable  svc_chn  svc_interval
+    0       N        0             1
+
+----------------------------------------vpss chn crop info--------------------------------------------------------------
+  grp  chn  crop_en     coord       x       y   width  height  trim_x  trim_y  trim_width  trim_height
+    0    0        N       ABS       0       0       0       0
+    0    1        N       ABS       0       0       0       0
+
+----------------------------------------vpss chn attr1------------------------------------------------------------------
+  grp  chn  enable  mode  width  height align mirror flip  src_rate  dst_rate  depth  vb_src  pool_id
+    0    0       Y  USER   3840    2160     8      N    N        -1        -1      0  common        -
+    0    1       Y  USER    720     480     8      N    N        -1        -1      0  common        -
+
+----------------------------------------vpss chn attr2------------------------------------------------------------------
+  grp  chn  aspect  video_x  video_y  video_w  video_h   bg_color  border  left_w right_w   top_w  bottom_w  bd_color
+    0    0    NONE        0        0        0        0        0x0       N       0       0       0         0       0x0
+    0    1    NONE        0        0        0        0        0x0       N       0       0       0         0       0x0
+
+----------------------------------------vpss chn attr3------------------------------------------------------------------
+  grp  chn  sharpen  sp_strength  quick_send  scale_type
+    0    0        N            0           N      NORMAL
+    0    1        N            0           N      NORMAL
+
+----------------------------------------vpss chn wrap attr--------------------------------------------------------------
+  grp  chn  enable  buf_line  buf_size  vb_size  pool_id    phy_addr
+    0    0       Y       128    687744   687872        2  0x465b8000
+
+----------------------------------------vpss ext chn attr1--------------------------------------------------------------
+  grp   ext_chn  enable src_chn   width  height  src_rate  dst_rate   depth   align        src_type  vb_src  pool_id
+
+----------------------------------------vpss ext chn attr2--------------------------------------------------------------
+  grp   ext_chn  scale_type
+
+----------------------------------------vpss chn low delay attr---------------------------------------------------------
+  grp  chn  enable  line_cnt   one_buf_en one_buf_addr act_low_delay_en
+    0    1       Y       200            N          0x0                Y
+
+----------------------------------------vpss chn ldc v3 attr------------------------------------------------------------
+  grp  chn  enable  view_type  center_x_offset  center_y_offset  distortion_ratio  min_ratio
+
+----------------------------------------vpss rgn info-------------------------------------------------------------------
+  grp     cover    mosaic    corner   overlay  position
+    0         0         0         0         0       cur
+    0         0         0         0         0      chn0
+    0         0         0         0         0      chn1
+
+----------------------------------------vpss chn proc ex----------------------------------------------------------------
+  grp  chn  rotate    cover_ex   mosaic_ex line_ex   corner_ex  overlay_ex
+    0    0       N           0           0       0           0           0
+    0    1       N           0           0       0           0           0
+
+----------------------------------------vpss node status----------------------------------------------------------------
+  grp  free_num  busy_num delay_num  backup     cur
+    0         8         0         0       0       1
+
+----------------------------------------vpss grp work status------------------------------------------------------------
+  grp   recv_pic preview_lost     new_do     old_do   new_undo   old_undo start_fail start  cost_time max_cost_time vpss
+    0        790            0        786          0          4          0          0     Y      25552         25565    0
+
+----------------------------------------vpss grp video frame info-------------------------------------------------------
+  grp   width  height pixel_fmt video_format dynamic_range    cmp_mode       first_pic_pts          cur_pic_pts
+    0    3840    2160 YVU-SP420       LINEAR          SDR8        NONE                   0                    0
+
+----------------------------------------vpss chn output status----------------------------------------------------------
+  grp  chn  enable   width  height  pixel_fmt  video_format  dynamic_range    cmp_mode  send_ok  frame_rate    proc_time
+    0    0       Y       0       0    UNKNOWN        LINEAR           SDR8 SEG_COMPACT        0           0            0
+    0    1       Y     720     480  YVU-SP420        LINEAR           SDR8        NONE      785          10        25903
+
+----------------------------------------vpss drv work status------------------------------------------------------------
+   link_int  bus_err  dcmp_err  frame_err  malloc_err  free_err  start_suc0 start_err0 node_err0
+        785        0         0          0           0         0         786          0         0
+
+----------------------------------------vpss hardware node queue--------------------------------------------------------
+   free_num    wait_num    proc_num sel00 busy000 busy001 sel01 busy010 busy011  load_ratio_0
+         13           0           0     1       0       1     0       0       0           34%
+
+----------------------------------------vpss int work status------------------------------------------------------------
+   cnt_per_sec   max_cnt_per_sec     cost_time   max_cost_time   cost_time_per_sec   max_cost_time_per_sec
+            20                21            48             524                4979                    5478
+/nfs/wya_dx #
