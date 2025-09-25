@@ -1,0 +1,2 @@
+am force-stop com.touch.isee
+am start com.touch.isee
