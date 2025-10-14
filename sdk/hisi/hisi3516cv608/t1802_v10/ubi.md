@@ -64,8 +64,8 @@
     echo "  Final UBI  : $UBIIMG_FINAL"
 
 
-# sdk编译
-## 编译打印
+# 原sdk编译
+## 原编译打印
     chmod +x /home/disk2/sdk/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0_8m/smp/a7_linux/source/bsp/pub/hi3516cv610_image_musl/mkubiimg.sh
     # build the pagesize = 2k, blocksize = 128k, part_size = 32M #
     pushd /home/disk2/sdk/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0_8m/smp/a7_linux/source/bsp/pub/hi3516cv610_image_musl;fakeroot ./mkubiimg.sh hi3516cv610 2k 128k /home/disk2/sdk/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0_8m/smp/a7_linux/source/bsp/pub/rootfs_musl_arm 32M /home/disk2/sdk/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0_8m/smp/a7_linux/source/bsp/pub/bin/pc;popd
@@ -75,7 +75,7 @@
     /home/disk2/sdk/hi3516cv610/Hi3516CV610_SDK_V1.0.2.0_8m/smp/a7_linux/source/bsp/pub/bin/pc/ubinize -o rootfs_hi3516cv610_2k_128k_32M.ubifs -m 2048 -p 131072 rootfs_hi3516cv610_2k_128k_32M.ubicfg
     ubinize: volume size was not specified in section "ubifs-volumn", assume minimum to fit image "rootfs_hi3516cv610_2k_128k_32M.ubiimg"3428352 bytes (3.2 MiB)
 
-## 编译脚本
+## 原编译脚本
     touch@touch-machine:pub$ cat ../../../source/bsp/tools/pc/ubi_sh/mkubiimg.sh
     #!/bin/bash
     
