@@ -77,4 +77,5 @@ Y:\sdk\wya\hi3516cv608\Hi3516CV610_SDK_V1.0.2.0\open_source\linux\linux-5.10.y\d
 		.driver    = &spi_driver_general,
 	},
 
-
+## 管教复用
+GD5F1GM7UEYIGR	0xC8 0x91 0x00 0x00 0x00 0x00 0x00 0x00	128MB	128KB	2KB	64B	1
