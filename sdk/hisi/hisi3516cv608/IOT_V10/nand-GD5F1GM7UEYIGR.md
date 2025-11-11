@@ -1,3 +1,7 @@
+## build
+
+make ARCH=arm CROSS_COMPILE=arm-v01c02-linux-musleabi- LIB_TYPE=musl CHIP=hi3516cv608 BOOT_MEDIA=spi_nand DEBUG=1 all
+
 ## uboot
 
 CONFIG_USE_BOOTARGS=y
