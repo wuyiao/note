@@ -5,3 +5,5 @@
 ## hi3516cv610
     查看：bspmm 0x17940098 
     修改：bspmm 0x17940098 value
+
+path:\Hi3516CV610R001C01SPC020_ReleaseDoc\zh\00.hardware\chip\Hi3516CV608(610)\Hi3516CV608(610)_PINOUT_CN.xlsl
