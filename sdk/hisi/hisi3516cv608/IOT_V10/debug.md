@@ -16,4 +16,3 @@
 ## cat /dev/ttyWCH0
     stty -F /dev/ttyWCH0 9600
     echo -e "\x41\x42\x43" > /dev/ttyWCH0
-    cat /dev/ttyWCH0
