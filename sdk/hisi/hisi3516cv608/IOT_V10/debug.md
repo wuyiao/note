@@ -11,7 +11,7 @@
     showmount -e
 # nfs
     mkdir -p /mnt/disk/nfs
-    mount -t nfs -o vers=3,proto=tcp,nolock 192.168.2.239:/home/disk2/nfs_share/wya/iot10 /mnt/disk/nfs/
+    mount -t nfs -o vers=3,proto=tcp,nolock 192.168.2.239:/home/disk2/nfs_share/wya/iot_v10 /mnt/disk/nfs/
 # ch9434
 ## cat /dev/ttyWCH0
     stty -F /dev/ttyWCH0 9600
