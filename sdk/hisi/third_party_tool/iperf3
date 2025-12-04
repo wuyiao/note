@@ -1,2 +1,1 @@
-./configure --host=arm-linux CC=/home/disk2/sdk/wya/hi3516cv608/gcc-20250305-arm-v01c02-linux-musleabi/arm-v01c02-linux-musleabi-gcc/bin/arm-v01c02-linux-musleabi-gcc  
---prefix=/home/disk2/sdk/wya/hi3516cv608/third_party_tool/install/iperf3
+./configure --host=arm-linux CC=/home/disk2/sdk/wya/hi3516cv608/gcc-20250305-arm-v01c02-linux-musleabi/arm-v01c02-linux-musleabi-gcc/bin/arm-v01c02-linux-musleabi-gcc --prefix=/home/disk2/sdk/wya/hi3516cv608/third_party_tool/install/iperf3
