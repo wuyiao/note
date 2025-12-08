@@ -29,3 +29,4 @@
     sudo apt update
     sudo apt install expect
 
+tar -cvf - rk3568_Android11/ | pigz -p 32 > rk3568_Android11.tar.gz
